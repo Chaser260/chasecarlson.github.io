@@ -1,5 +1,8 @@
-### Hi there 👋
-Welcome to my profile. My name is Chase. I've spent the last 17 years as a retail leader, working directly with customers and front line employees to deliver exceptional customer experiences and business results. I am always motivated by a good challenge or problem to solve. After doing some serious self reflection over the past two years about my true passions and interests, I've discovered the awesome world of data analytics.  
+### Hi there 👋, welcome to my profile
+#### My name is Chase
+![My name is Chase](https://media-exp1.licdn.com/dms/image/C4D16AQGGcJfD2DtDCw/profile-displaybackgroundimage-shrink_350_1400/0/1516810690613?e=1665014400&v=beta&t=SxDRj0J4l5Rommct2Rf8FLE7Mlyt5XqUN0D_yi8miPE)
+
+I've spent the last 17 years in retail working directly with customers and front line employees to deliver exceptional customer experiences and business results. I am always motivated by a good challenge or problem to solve. After doing some serious self reflection over the past couple of years about where I want my career to take me, I've discovered the awesome world of data analytics.  
 
 Outside of work, I am fueld by a passion for sport and competition: particularly NFL football and golf. However, some of my favorite games to play also include badminton, pickleball, and bowling. I am also becoming increasingly interested in saving the planet from self destruction 🌎💥 (not sure how yet, but the answer is in the data).  
 
@@ -7,17 +10,11 @@ I'm currently building out my portfolio, but it will include projects relating t
 
 Connect with me on [LinkedIn](www.linkedin.com/in/carlson-chase).
 
-<!--
-**Chaser260/Chaser260** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Skills: R | Excel | SQL | Tableau
 
-Here are some ideas to get you started:
+- 🔭 I’m currently working on this page. 
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+
+
+
+
