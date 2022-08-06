@@ -1,5 +1,11 @@
 ### Hi there 👋
-Welcome to my profile. My name is Chase. 
+Welcome to my profile. My name is Chase. I've spent the last 17 years as a retail leader, working directly with customers and front line employees to deliver exceptional customer experiences and business results. I am always motivated by a good challenge or problem to solve. After doing some serious self reflection over the past two years about my true passions and interests, I've discovered the awesome world of data analytics.  
+
+Outside of work, I am fueld by a passion for sport and competition: particularly NFL football and golf. However, some of my favorite games to play also include badminton, pickleball, and bowling. I am also becoming increasingly interested in saving the planet from self destruction 🌎💥 (not sure how yet, but the answer is in the data).  
+
+I'm currently building out my portfolio, but it will include projects relating to all of my interests in and outside of work. Please feel free to comment on my work, ask questions, or suggest topics for me to play with. Thank you for visiting!
+
+Connect with me on [LinkedIn](www.linkedin.com/in/carlson-chase).
 
 <!--
 **Chaser260/Chaser260** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
