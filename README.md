@@ -6,7 +6,7 @@ I've spent the last 17 years in retail working directly with customers and front
 
 Outside of work, I am fueld by a passion for sport and competition: particularly NFL football and golf. However, some of my favorite games to play also include badminton, pickleball, and bowling. I am also becoming increasingly interested in saving the planet from self destruction 🌎💥 (not sure how yet, but the answer is in the data).  
 
-I'm currently building out my portfolio, but it will include projects relating to all of my interests in and outside of work. Please feel free to comment on my work, ask questions, or suggest topics for me to play with. Thank you for visiting!
+I'm currently building out my portfolio. It will include projects relating to all of my interests in and outside of work. Please feel free to comment on my work, ask questions, or suggest topics for me to play with. Thank you for visiting!
 
 Connect with me on [LinkedIn](www.linkedin.com/in/carlson-chase).
 
