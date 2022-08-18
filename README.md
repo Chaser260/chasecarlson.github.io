@@ -2,7 +2,7 @@
 ### Hi there 👋, welcome to my profile
 #### My name is Chase
 
-I've spent the last 17 years in retail working directly with customers and front line employees to deliver world class experiences and business results. I am always motivated by a good challenge or problem to solve. After doing some serious self reflection over the past couple of years about where I want my career to take me, I've discovered the awesome world of data analytics.  
+I've spent the last 17 years in retail working directly with customers and front line employees to deliver world class experiences and business results. I am highly motivated by tough challenges, and have spent the greater part of my career pursuing the best possible solutions and taking pride in helping others solve similar challenges. After doing some serious self reflection over the past couple of years about where I want to go next in my career, I've discovered I'm right at home in the awesome world of data and analytics. 
 
 Outside of work, I am fueld by a passion for sport and competition: particularly NFL football and golf. However, some of my favorite games to play also include badminton, pickleball, and bowling. I am also becoming increasingly interested in saving the planet from self destruction 🌎💥 (not sure how yet, but the answer is in the data).  
 
