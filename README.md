@@ -1,6 +1,6 @@
+![My name is Chase](https://media-exp1.licdn.com/dms/image/C4D16AQGGcJfD2DtDCw/profile-displaybackgroundimage-shrink_350_1400/0/1516810690613?e=1665014400&v=beta&t=SxDRj0J4l5Rommct2Rf8FLE7Mlyt5XqUN0D_yi8miPE)
 ### Hi there 👋, welcome to my profile
 #### My name is Chase
-![My name is Chase](https://media-exp1.licdn.com/dms/image/C4D16AQGGcJfD2DtDCw/profile-displaybackgroundimage-shrink_350_1400/0/1516810690613?e=1665014400&v=beta&t=SxDRj0J4l5Rommct2Rf8FLE7Mlyt5XqUN0D_yi8miPE)
 
 I've spent the last 17 years in retail working directly with customers and front line employees to deliver exceptional customer experiences and business results. I am always motivated by a good challenge or problem to solve. After doing some serious self reflection over the past couple of years about where I want my career to take me, I've discovered the awesome world of data analytics.  
 
