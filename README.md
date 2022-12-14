@@ -1,4 +1,4 @@
-![My name is Chase](https://media-exp1.licdn.com/dms/image/C4D16AQGGcJfD2DtDCw/profile-displaybackgroundimage-shrink_350_1400/0/1516810690613?e=1665014400&v=beta&t=SxDRj0J4l5Rommct2Rf8FLE7Mlyt5XqUN0D_yi8miPE)
+![My name is Chase](https://media.licdn.com/dms/image/C4D16AQGGcJfD2DtDCw/profile-displaybackgroundimage-shrink_350_1400/0/1516810690613?e=1676505600&v=beta&t=x8swEJbe93Po23i4iybiSKYlJSePn_g37fZl3QJ-t3g)
 ### Hi there 👋, welcome to my profile
 #### My name is Chase
 
