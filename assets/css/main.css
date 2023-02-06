@@ -794,8 +794,9 @@ input, select, textarea {
 			margin: 0 0 2rem 0;
 			width: 100%;
 			text-align: center;
+			cursor: pointer;
 		}
-		.image.fit:hover {width: 200%; height: 200%; left:-50%}
+		.image.fit:active:hover {width: 200%; height: 200%; left:-50%;}
 
 		.center {
 			display: block;
