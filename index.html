@@ -56,47 +56,203 @@
 							<article id="projects">
 								<h2><a href="https://public.tableau.com/app/profile/chase.carlson/viz/InteractiveResume_16713412902270/Dashboard1" class="major">Interactive R&eacute;sum&eacute; | Tableau</a></h2>
 								<a href="https://public.tableau.com/app/profile/chase.carlson/viz/InteractiveResume_16713412902270/Dashboard1"><span class="image main"><img src="images/Interactive Resume.png" alt="" /></span></a>
-								<p>What better way is there to get to know me than through interacting with my experiences? I saw a LinkedIn post one time showing some of the ways people have created interactive r&eacute;sum&eacute;s in 
-									Tableau and I was inspired to create my own.</p>
-								<p>In this interactive r&eacute;sum&eacute;, you get to see my professional background in a unique way. My work and educational history are presented in a rounded Gantt chart in the center, with my hard and soft skills represented in the horizontal bubble chart below by half-circles (soft skills) and triangles (hard skills).
-									Hover over, or click each of the elements to explore!</p>
+								<b>Intro</b>
+								<p>What better way is there to get to know me than through interacting with my experiences? I recently saw a LinkedIn post showing some of the creative ways people have made interactive r&eacute;sum&eacute;s in 
+									Tableau and I was inspired to create my own. </p>
+								<b>Purpose</b>
+								<p>I decided to make this r&eacute;sum&eacute; to showcase my technical and creative skills to potential employers in the analytical space. When people think "Store Manager" they don't always associate it with the same
+									skills and responsibilities as a Business or Data Analyst, however, the roles have some extraordinarily similar qualities. <p>
+								</p>A Store Manager, much like a Data Analyst is responsible for analyzing their business using 
+									whatever analytical tools available to them (Excel, SQL, Tableau, etc...) to identify patterns and trends in the data that help themselves, or their businesses make better decisions. They then take this information and put it together
+									in various forms to communicate their findings and best practices with their peers, managers, and other key stakeholders in weekly, monthly, and quarterly business reviews. Unlike a Data Analyst however, Store Managers are then responsible
+									for developing their own action plans, and then communicating the solution and leading their teams to execute the plan from end-to-end while maintaining responsiblity over success or failure.</p>
+								<p>In this interactive r&eacute;sum&eacute;, you get to see my professional background in a unique way, with additional context that wouldn't fit in a typical one-pager. My work and educational history are presented in a rounded Gantt chart 
+									in the center, with my hard and soft skills represented in the horizontal bubble chart below by half-circles (soft skills) and triangles (hard skills). Something that is not included in my r&eacute;sum&eacute; yet is that I have applied 
+									to receive my master's degree in Global Supply Chain Management at Portland State University, which starts in the Spring of 2023. Once I get admitted I will add it to my timeline as in-progress.<p>
+									</p>Hover over, or click each of the elements to explore!</p>
 							</article>
 
 						<!-- Projects -->
 						<article id="projects">
 							<h2><a href="https://public.tableau.com/app/profile/chase.carlson/viz/GlobalSuperstoreDashboard_16747734773080/ExecutiveDashboard" class="major">Retail Dashboard | Tableau</a></h2>
 							<a href="https://public.tableau.com/app/profile/chase.carlson/viz/InteractiveResume_16713412902270/Dashboard1"><span class="image main"><img src="images/Retail Dashboard.png" alt="" /></span></a>
-							<p>Spending the last 17 years in retail, I know there is a wide gap when it comes to data literacy and interpretation, so I wanted to create a retail dashboard that is simple, yet delivers a ton of value to field leaders. 
-								To promote data literacy and help users understand how to operate the reports, each dashboard has an instruction overlay providing basic information about how to navigate the report. 
-								The overlay can be closed or opened by selecting the "X" in the top left corner. The workbook is comprised of 3 dashboards:</p>
-							<p>Executive Dashboard - This dashboard provides a high-level overview of the business. It was built with retail managers in mind so that they can identify KPI trends at a global level. </p>
-							<p>Field Dashboard - As an ex-Store Manager, this dashboard has the information that I would expect to see as a field leader. This dashboard allows managers to dive deeper into the business by 
-								segment, category, sub-category, and customer-level data. </p>
-							<p>KPI Detail - Not everyone is a chart and graph person... This dashboard provides users the flexibility to see their business in their own way, and drill-down KPIs how they would like based 
-								on the various dimensions. </p>
+							<b>Purpose</b>
+							<p>In this project I wanted to create a retail KPI dashboard that is simple, yet delivers a ton of value to field leaders. The end user wants to be able to:</p>
+							<ul>
+								<li>Flexibly filter by location</li>
+								<li>See performance period-over-period</li>
+								<li>Compare performance across stores/regions/markets</li>
+								<li>Identify which categories, sub-categories, and products drove the biggest performance wins and losses</li>
+								<li>Customize how they can drill into their KPIs to create their own stories based on their uniqe challenges</li>
+							  </ul>
+							<u><b>Preparing the data</u></b>
+							  <p>The first thing that I did to set up the data was to join the Orders table with the Returns and People tables, and bring this static dataset up to the current time by using the expression: <p>
+								DATEADD('day',
+								DATEDIFF('day',{MAX([Order Date])},TODAY()-1),
+								[Order Date (old)]). 
+							<p>After deciding what I wanted to include in the dashboard, I started creating custom date parameters that would allow the user to either pick from a list of common periods (Yesterday, Week-to-date, Month-to-date, etc...), or select 
+								their own custom date range on which to compare sales. I then created a paremeter list for users to select their desired KPI. Each KPI has a calculation that refers to the selected period and the comparison period, as well as a 
+								directional "arrow" to symolize increase, decrease, or flat based on the difference between periods. Finally, I calculated the 
+								custom KPIs such as ASP (Average Sale Price) and UPT (Units Per Transaction) and started building my worksheets.</p>
+							<b>Design</b>
+							<p><u>Executive Dashboard</u>: This dashboard provides a high-level overview of the business for Regional Managers and above to identify KPI trends at a global level. I wanted the most important metrics to be displayed front and center 
+								at the top of the page in what are called BANs (Big A** Numbers), to provide quick context and key takeaways on the business's current performance. </p>
+							<p>The horizontal bar chart (bottom left) allows the user to drill down on each KPI by location. The user has the flexibility to drill all the way down to the City level to see how individual stores are performing.</p>
+							<p>The hotspot map (bottom right) allows the user to quickly compare KPI's at a global level. The color intensity and bubble size indicate KPI performance for each market, country, or region depending on applied filters. Users can click on 
+								a specific country to see details, or use the filters at the top of the page and the map will refocus to show only the selected locations.</p>
+							<p><u>Field Dashboard</u>: As an ex-Store Manager, this dashboard has the information that I would expect to see at that level. This dashboard allows managers to dive deeper into the business by 
+								segment, category, sub-category, and customer-level data. Similar to the Executive dashboard, major KPIs that are most relevant to Store Managers are located in BANs at the top of the report. Just below,
+								users can see the current performance trends by Segment and Category/Sub-Category. Rather than creating another view for Category (which contains only Furniture, Office Supplies, and Technology), I allow them to use the filters at the top
+								to control this level of detail in each view.</p>
+							<p>At the bottom of the Field dashboard I created views for the user to see their top and bottom products for each KPI. Managers are able to identify which products are contributing the most and least value to their business
+								so they can make adjustments at the local level to drive sales or fix issues causing poor performance. When I was a store manager, bottom sellers often would often uncover inventory discrepancies preventing products from being sold
+								that wouldn't have been discovered otherwise. Depending on the business, the ability to see customer level data can help managers build important relationships with customers.</p>
+							<p><u>KPI Detail</u>: Not everyone is a chart and graph person, and no single dashboard is going to display everything... To allow managers flexibility to dive deeper into their numbers, this dashboard allows the user to drill-down KPIs in a number of ways.
+								The user can create a location based view, a category based view, an order priority based view, or any combination.</p>
+							<b>Data Literacy</b>
+							<p>To promote data literacy and help users understand how to operate the reports, each dashboard has an instruction overlay providing basic information about how to navigate the report. 
+								The overlay can be closed or opened by selecting the "X" in the top left corner. Each bar chart dynamically highlights the top performing location or product based on the filtered KPI, as well as the period vs. period change.</p>
+							
+							
 						</article>
 
 						<!-- Projects -->
 						<article id="projects">
 							<h2><a href="https://public.tableau.com/app/profile/chase.carlson/viz/BellabeatMarketingCaseStudy/Story1" class="major">Bellabeat Case Study | SQL</a></h2>
 							<a href="https://public.tableau.com/app/profile/chase.carlson/viz/BellabeatMarketingCaseStudy/Story1"><span class="image main"><img src="images/Bellabeat Case Study.png" alt="" /></span></a><br>
+							<b>Purpose</b>
 							<p>This case study is the capstone project in the Google Data Analytics Professional Certificate on Coursera. I was provided a dataset from Kaggle on which to analyze trends in fitness tracker usage 
 								to answer key business questions and make high-level recommendations for a wellness brand's marketing strategy (Bellabeat).</p>
 							<p>In this project I take on the role of a data analyst working on the marketing analytics team at Bellabeat, a high-tech manufacturer of health-focused products for women. Bellabeat is a successful 
 								small company, but they aspire to become a larger player in the global smart device market. 
 								I have been tasked with focusing on one of Bellabeat's core products and analyzing smart device data to gain insight into how consumers are already using their devices. The Insights I discover 
-								will then help guide the marketing strategy for the company. I have created a presentation as a Tableau Story to present my high-level recommendations. </p>
-							<p>See this project done in <a href="https://github.com/Chaser260/bellabeat-capstone-case-study">R Studio</a></p>
+								will then help guide the marketing strategy for the company.</p>
+							<b>Key business questions</b>
+							<p>To get started, I was asked to analyze smart device usage data to gain insight into how consumers use non-Bellabeat smart devices. The following questions will guide my analysis:</p>
+							<ol type="1">
+									<li>What are some trends in smart device usage?</li>
+									<li>How could these trends apply to Bellabeat customers?</li>
+									<li>How could these trends help influence Bellabeat marketing strategy?</li>
+							</ol>
+							<b>About the data</b>
+							<p>I was provided a dataset on which to perform my analysis:<p>
+							<ul>
+								<li><a href="https://www.kaggle.com/datasets/arashnic/fitbit"> FitBit Fitness Tracker Data</a> (CC0: Public Domain, dataset made available through <a href="https://www.kaggle.com/arashnic">Mobius</a>): This Kaggle data set
+									contains personal fitness tracker from thirty three fitbit users. 
+								</li>
+							</ul>
+							<p>Thirty three eligible Fitbit users consented to the submission of personal tracker data, including minute-level output for physical activity, 
+								heart rate, and sleep monitoring. It includes information about daily activity, steps, and heart rate that can be used to explore users’ habits.
+								However, this dataset has several limitations to keep in mind as I explore the data:</p>
+							<ol type="1">
+								<li>The sample size is extremely small, and not all users had 100% participation.</li>
+								<li>There is no way to determine the gender of participants. Since Bellabeat specifically designs products for women, this data set may not be the best representation of Bellabeat's target audience.</li>
+								<li>Not all devices tracked the same information (i.e. sleep and weight log data), so results using that data will be less reliable.</li>
+								<li>This data set is 7 years old. Both Bellabeat and Fitbit have since come out with new devices and technology that have impacted the way people use their devices.</li>
+							</ol></p>
+							<b>Preparing the data</b>
+							<p>After creating a database in MySQL and importing all of the csv files, I started by checking the basic statistics and cleaning the data. I went through and 
+								removed duplicate records and outliers that would skew the data, renamed and formatted columns for consistency, and merged tables to compare sleep and weight log data alongside 
+								other daily activity. I have uploaded my SQL scripts with detailed notes to my GitHub page <a href="https://github.com/Chaser260/Bellabeat-Marketing-Case-Study-Tableau">here</a>.
+							</p>
+							<b>Designing the dashboard</b>
+							<p>I decided to make this a Tableau story where I could present my findings in a similar method as a PPT presentation. There are 4 different slides excluding the title page.<p>
+							<p><u>Overview</u>: I provide a brief explanation of the project and the business task.</p>
+							<p><u>Analysis</u>: I briefly describe the tools I used to complete the analysis, and the questions I wanted to answer while exploring the data.</p>
+							<p><u>Results</u>: I summarize my high level recommendations I for Bellabeat regarding how this information can help guide marketing strategy.</p>
+							<p><u>Interactive Dashboard</u>: I compiled some of the key insights I found into an interactive dashboard with visuals for the various activities. In a presentation, these would likely
+								be static images that display my results, however, for this particular project I wanted to give real viewers the chance to customize their interaction with the data. Therefore, the horizontal activity bar chart and the 
+								sleep vs. activity scatter are both able to to be filtered for different activities.</p>
+							<p style="text-align:right;">See this project also done in <a href="https://github.com/Chaser260/bellabeat-capstone-case-study">R Studio</a></p>
 						</article>
 
 						<!-- Projects -->
 						<article id="projects">
 							<h2><a href="https://github.com/Chaser260/PDX-weather" class="major">PDX Weather Analysis | R</a></h2>
 							<a href="https://github.com/Chaser260/PDX-weather"><span class="image main"><img src="images/PDX Weather Analysis.png" alt="" /></span></a><br>
-							<p>I'm fascinated by climate change and weather related events. To develop my skills with the program language R, I pulled real climate data for the PDX weather station dating back to 1938 from NOAA.gov, to help me visualize what weather in Portland has looked like over the last 84 years.</p>
+							<b>Purpose</b>
+							<p>I'm fascinated by climate change and weather related events. To develop my skills with the program language R, I pulled real climate data for the PDX weather station dating back to 1938 from NOAA.gov, to help me visualize what climate in Portland has looked like over the last 84 years.</p>
 							<p>Prior to moving to Portland in 2011, I lived in Bend, OR. Growing up, all I ever heard about was how wet and rainy Portland was. People made it sound like Portland never saw the sun. In my exploration of the data, I found some interesting facts relating to precipitation, snow, and temperature change in Portland. All this Portland data made me curious to compare it to my home town of Bend, OR.<p>
 							<p>Spoiler alert! Although the average temperature in Portland has been rising over the past 80 years, temperatures in Bend have actually declined! </p>
-							<p>Go ahead, <a href="https://github.com/Chaser260/PDX-weather">check it out!</a></p>
+							<b>Preparing the data</b>
+							<p>To start this project, I used the tidyverse package and the read_csv function to establish a live connection with the NOAA.gov site that provides the .csv file for the PDX weather station. 
+								Since the data didn't originally have column headers in the source file, I had to manually locate those in the README file and add them to my import. After determining the columns that I needed, 
+								I imported the data and performed a pivot_wider function to change it from long format to wide to get each of the variables into separate columns. The only variables I was interested in were: date, tmax, tmin, prcp, & snow. I also had to use the lubridate package to adjust 
+								the date format to be in ymd format instead of just a string of numbers. Once my table format was established, I saved it to a variable called pdx_weather, and saved it as the source file on which
+								to run future analyses. Now, I can come back to it at any time and run the script to get updated climate data.</p>
+							<b>Analysis</b>
+							<p>The first thing I wanted to look at was precipitation and snow data. To get started it's always a good idea to make sure the data makes sense. I first went through and checked for outliers by visualizing the data using a line plot and a histogram.
+								I initially thought there might have been something wrong with the snow data, but after searching the date on Google, I discovered that over 40 inches of snow actually did dump on Portland in January of 1950! 
+								See the figure below:</p>
+							<div class="image">
+								<div class="image fit">
+									<img src="/images/pdx_cumulative_snowfall.png" alt="" class="center">
+									<div class="description"><h6>PDX snowfall 1950</h6></div>	
+								</div>
+							</div>
+							<p>To get a better look at snow in Portland, the next thing I did was organize the data so that I could see snow by month. This would allow me to see when it typically starts and stops snowing, and which months get the most snow. To do this I had to reorganize the calendar into
+								a "snow year", which puts any snow that occurs before August is added to the previous calendar year's snow season. I learned that the latest it has ever snowed in Portland is May (1953), and the earliest it has ever snowed was October (1950). Portland also has 9 years on record with no snow.
+								I came up with the following visual with a nother striking view how snow is distributed throughout the year: 
+							</p>
+								<div class="image fit"> 
+									<img src="/images/pdx_snow_by_month.png" alt="" class="center">
+									<div class="description"><h6>PDX snow by month</h6></div>
+								</div>
+							
+							<p>After checking the data for anomalies, I moved on to plotting precipitation in a way I could see each year and compare current precipitation to the average precipitation for the last 84 years.
+								I created a line plot where each line represents the cumulative precipitation for a single year. I then added code to highlight the current year in blue, all other years in light gray, and the 
+								mean precipitation in a black smoothed curve. I found that as of June, our precipitation was higher than average, but I was really intrigued to find out what year had the massive spike
+								that dumped over 60 inches! I created the two plots below to find out:
+							</p>
+							<div class="image">
+								<div class="image fit">
+									<img src="/images/current_prcp.png" alt="" class="center">
+									<div class="description"><h6>PDX precipitation 2022</h6></div>
+								</div>
+
+								<div class="image fit">
+									<img src="/images/max_prcp.png" alt="" class="center"> 
+									<div class="description"><h6>PDX precipitation 1996</h6></div>
+								</div>
+							</div>
+							<p>This was all very interesting and fun to learn, but I really wanted to know whether it has been getting wetter or drier over the last 84 years. I also thought it would be a good idea to put this on a line plot.
+								I figured I should see which direction the temperature has been moving also to find out if there is a relationship between temperature and precipitation. I created the faceted line plot below to see this relationship:
+							</p>
+							<div class="image">
+								<div class="image fit">
+									<img src="/images/temp_precipitation_line.png" alt="" class="center">
+									<div class="description"><h6>Temperature Vs. Precipitation</h6></div>
+								</div>
+							</div>
+							<p>Then I put tmax and prcp into a scatterplot and ran a correlation test:</p>
+							<div class="image">
+								<div class="image fit">
+									<img src="/images/temp_precipitation_scatterplot.png" alt="" class="center">
+									<div class="description"><h6>Temperature Vs. Precipitation 2</h6></div>
+								</div>
+							</div>	
+							<p>No significant relationship exists between temperature and precipitation.</p>	
+							<p>2022 was a hot year, so I wanted to dive deeper into this temperature change next. I wanted to be able to see how the average temperature in 2022 compared to historical temps. I found a few interesting ways to visualize this.</p>
+							   A line chart that shows PDX temperature change (above or below the normalized mean) by month, with 2022 highlighted in dodgerblue, and all other years in light gray. This chart you can see in this chart that July through October were some
+							   of the hottest months on record, between 5-10 degrees hotter than average.</p>
+							<div class="image">
+								<div class="image fit">
+									<img src="/images/pdx_average_annual_temp.png" alt="" class="center">
+									<div class="description"><h6>Temperature Vs. Precipitation 2</h6></div>
+								</div>
+							</div>	
+							<p>During our record heatwave during summer of 2022, I saw a scatterplot posted on Twitter that visualized the record heat in California and I figured out how to reproduce the same visual for Portland. This chart has the daily high temps in 
+								gray for each day dating back to 1939, and the current month of interest highlighted in dodgerblue, and a dotted white line representing the normalized mean temp on which I compared. I found that both September and October of 2022 were 
+								the hottest September and Octobers on record at PDX.</p>	
+							<div class="image">
+								<div class="image fit">
+									<img src="/images/PDX_Record_Heat_October.png" alt="" class="center">
+									<div class="description"><h6>Record Heat</h6></div>
+								</div>
+							</div>
+							<p>I can honestly say that this has been my favorite project so far because I can come back to it at any time to update any of the visuals to reflect recent events. I learned a ton about
+								R programming, and I'm excited to continue to produce more projects in the future. If you want to see my code with detailed notes, and the additional comparisons I made with Bend climate data,
+								please check it out on my <a href="https://github.com/Chaser260/PDX-weather">GitHub</a> page!</p>
 						</article>
 
 						<!-- Projects -->
@@ -413,5 +569,125 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<!-- <script>
+				// Get the modal
+				var modal = document.getElementById('myModal');
+
+				// Get the image and insert it inside the modal - use its "alt" text as a caption
+				var img = document.getElementById('myImgL');
+				var modalImg = document.getElementById("img01");
+				var captionText = document.getElementById("caption");
+				img.onclick = function(){
+				modal.style.display = "block";
+				modalImg.src = this.src;
+				modalImg.alt = this.alt;
+				captionText.innerHTML = this.alt;
+				}
+
+				// Get the <span> element that closes the modal
+				var span = document.getElementsByClassName("close")[0];
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() { 
+				modal.style.display = "none";
+				}
+			</script>
+
+			<script>
+				// Get the modal
+				var modal = document.getElementById('myModal');
+
+				// Get the image and insert it inside the modal - use its "alt" text as a caption
+				var img = document.getElementById('myImgR');
+				var modalImg = document.getElementById("img01");
+				var captionText = document.getElementById("caption");
+				img.onclick = function(){
+				modal.style.display = "block";
+				modalImg.src = this.src;
+				modalImg.alt = this.alt;
+				captionText.innerHTML = this.alt;
+				}
+
+				// Get the <span> element that closes the modal
+				var span = document.getElementsByClassName("close")[0];
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() { 
+				modal.style.display = "none";
+				}
+			</script>
+
+			<script>
+				// Get the modal
+				var modal = document.getElementById('myModal');
+
+				// Get the image and insert it inside the modal - use its "alt" text as a caption
+				var img = document.getElementById('myImgL1');
+				var modalImg = document.getElementById("img01");
+				var captionText = document.getElementById("caption");
+				img.onclick = function(){
+				modal.style.display = "block";
+				modalImg.src = this.src;
+				modalImg.alt = this.alt;
+				captionText.innerHTML = this.alt;
+				}
+
+				// Get the <span> element that closes the modal
+				var span = document.getElementsByClassName("close")[0];
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() { 
+				modal.style.display = "none";
+				}
+			</script>
+
+			<script>
+				// Get the modal
+				var modal = document.getElementById('myModal');
+
+				// Get the image and insert it inside the modal - use its "alt" text as a caption
+				var img = document.getElementById('myImgR1');
+				var modalImg = document.getElementById("img01");
+				var captionText = document.getElementById("caption");
+				img.onclick = function(){
+				modal.style.display = "block";
+				modalImg.src = this.src;
+				modalImg.alt = this.alt;
+				captionText.innerHTML = this.alt;
+				}
+
+				// Get the <span> element that closes the modal
+				var span = document.getElementsByClassName("close")[0];
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() { 
+				modal.style.display = "none";
+				}
+			</script>
+
+			<script>
+				// Get the modal
+				var modal = document.getElementById('myModal');
+
+				// Get the image and insert it inside the modal - use its "alt" text as a caption
+				var img = document.getElementById('myImg3');
+				var modalImg = document.getElementById("img01");
+				var captionText = document.getElementById("caption");
+				img.onclick = function(){
+				modal.style.display = "block";
+				modalImg.src = this.src;
+				modalImg.alt = this.alt;
+				captionText.innerHTML = this.alt;
+				}
+
+				// Get the <span> element that closes the modal
+				var span = document.getElementsByClassName("close")[0];
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() { 
+				modal.style.display = "none";
+				}
+			</script> -->
+			
 	</body>
 </html>
