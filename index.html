@@ -122,23 +122,64 @@
 							<h4>Design</h4>
 							<p><u>Executive Dashboard</u>: This dashboard provides a high-level overview of the business for Regional Managers and above to identify KPI trends at a global level. I wanted the most important metrics to be displayed front and center 
 								at the top of the page in what are called BANs (Big A** Numbers), to provide quick context and key takeaways on the business's current performance. </p>
+								<div class="image">
+									<div class="image fit">
+										<img title = "Click to enlarge" src="/images/BANs.png" alt="" class="center">
+										<div class="description"><h6>BANs</h6></div>	
+									</div>
+								</div>
 							<p>The horizontal bar chart (bottom left) allows the user to drill down on each KPI by location. The user has the flexibility to drill all the way down to the City level to see how individual stores are performing.</p>
+							<div class="image">
+								<div class="image fit">
+									<img title = "Click to enlarge" src="/images/Orders by location.png" alt="" class="center">
+									<div class="description"><h6>Horizontal Bar Chart</h6></div>	
+								</div>
+							</div>
 							<p>The hotspot map (bottom right) allows the user to quickly compare KPI's at a global level. The color intensity and bubble size indicate KPI performance for each market, country, or region depending on applied filters. Users can click on 
 								a specific country to see details, or use the filters at the top of the page and the map will refocus to show only the selected locations.</p>
+								<div class="image">
+									<div class="image fit">
+										<img title = "Click to enlarge" src="/images/Orders by country.png" alt="" class="center">
+										<div class="description"><h6>Hotspot Map</h6></div>	
+									</div>
+								</div>
 							<p><u>Field Dashboard</u>: As an ex-Store Manager, this dashboard has the information that I would expect to see at that level. This dashboard allows managers to dive deeper into the business by 
 								segment, category, sub-category, and customer-level data. Similar to the Executive dashboard, major KPIs that are most relevant to Store Managers are located in BANs at the top of the report. Just below,
 								users can see the current performance trends by Segment and Category/Sub-Category. Rather than creating another view for Category (which contains only Furniture, Office Supplies, and Technology), I allow them to use the filters at the top
 								to control this level of detail in each view.</p>
+								<div class="image">
+									<div class="image fit">
+										<img title = "Click to enlarge" src="/images/Orders by sub-category.png" alt="" class="center">
+										<div class="description"><h6>Orders | by sub-category</h6></div>	
+									</div>
+								</div>
 							<p>At the bottom of the Field dashboard I created views for the user to see their top and bottom products for each KPI. Managers are able to identify which products are contributing the most and least value to their business
 								so they can make adjustments at the local level to drive sales or fix issues causing poor performance. When I was a store manager, bottom sellers often would often uncover inventory discrepancies preventing products from being sold
 								that wouldn't have been discovered otherwise. Depending on the business, the ability to see customer level data can help managers build important relationships with customers.</p>
+								<div class="image">
+									<div class="image fit">
+										<img title = "Click to enlarge" src="/images/Top 10 by product.png" alt="" class="center">
+										<div class="description"><h6>Top 10 | by product</h6></div>	
+									</div>
+								</div>
 							<p><u>KPI Detail</u>: Not everyone is a chart and graph person, and no single dashboard is going to display everything... To allow managers flexibility to dive deeper into their numbers, this dashboard allows the user to drill-down KPIs in a number of ways.
 								The user can create a location based view, a category based view, an order priority based view, or any combination.</p>
+								<div class="image">
+									<div class="image fit">
+										<img title = "Click to enlarge" src="/images/KPI drill down.png" alt="" class="center">
+										<div class="description"><h6>KPI drill down table</h6></div>	
+									</div>
+								</div>
 							<h4>Data Literacy</h4>
 							<p>To promote data literacy and help users understand how to operate the reports, each dashboard has an instruction overlay providing basic information about how to navigate the report. 
 								The overlay can be closed or opened by selecting the "X" in the top left corner. Each bar chart dynamically highlights the top performing location or product based on the filtered KPI, as well as the period vs. period change.</p>
-							
-							
+								<div class="image">
+									<div class="image fit">
+										<img title = "Click to enlarge" src="/images/Instruction overlay.png" alt="" class="center">
+										<div class="description"><h6>KPI drill down table</h6></div>	
+									</div>
+								</div>
+							<p>Check out the full dashboard <a href="https://public.tableau.com/views/GlobalSuperstoreDashboard_16747734773080/ExecutiveDashboard?:language=en-US&:display_count=n&:origin=viz_share_link">here</a>.</p>
 						</article>
 
 						<!-- Projects -->
@@ -286,9 +327,9 @@
 							<h2><a href="https://public.tableau.com/app/profile/chase.carlson/viz/LebronJamesCareerStats_16615631128000/Dashboard1" class="major">LeBron James Stats | Excel</a></h2>
 							<a href="https://public.tableau.com/app/profile/chase.carlson/viz/LebronJamesCareerStats_16615631128000/Dashboard1"><span class="image main"><img src="images/LeBron James Stats.png" alt="" /></span></a>
 							<h4>Purpose</h4>
-							<p>This was my first self-guided project using Tableau to create a visualization. I love following all the G.O.A.Ts in their respective sports, but I was particularly interested in how I could display their 
-								stats in visual form. I decided to focus on Lebron because I knew he was getting close to breaking the all-time scoring record held by Kareem Abdul Jabar for the last 30 years. I wanted to see how he scored
-								against each team he played against and where he has his best W/L ratio.
+							<p>This was my first self-guided project using Tableau to create a visualization. I performed most of the heavy lifting in Excel prior to importing into Tableau. I'll go more into detail about how I processed
+								the data in Excel below. I love following all the G.O.A.Ts in their respective sports, but I was particularly interested in putting it into a vizz. I decided to focus on Lebron because I knew he was getting 
+								close to breaking the all-time scoring record held by Kareem Abdul Jabar for the last 30 years. I wanted to see how he scored against each team he played against and at which arenas he plays best.
 							</p>
 							<h4>Process</h4>
 							<p>For this project, I pulled dozens of tables from the nba.com stats pages and used powerquery to merge all of the files into a single Excel doc. To prepare the data for analysis, I used Text to Columns to
