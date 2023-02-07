@@ -87,13 +87,38 @@
 							  </ul>
 							<h4>Preparing the data</h4>
 							  <p>The first thing that I did to set up the data was to join the Orders table with the Returns and People tables, and bring this static dataset up to the current time by using the expression: <p>
-								<pre><code>DATEADD('day',
-									DATEDIFF('day',{MAX([Order Date (new)])},TODAY()-1),
-									[Order Date])</code></pre>
-							<p>After deciding what I wanted to include in the dashboard, I started creating custom date parameters that would allow the user to either pick from a list of common periods (Yesterday, Week-to-date, Month-to-date, etc...), or select 
-								their own custom date range on which to compare sales. I then created a paremeter list for users to select their desired KPI. Each KPI has a calculation that refers to the selected period and the comparison period, as well as a 
-								directional "arrow" to symolize increase, decrease, or flat based on the difference between periods. Finally, I calculated the 
-								custom KPIs such as ASP (Average Sale Price) and UPT (Units Per Transaction) and started building my worksheets.</p>
+								<pre><code>DATEADD('day', DATEDIFF('day',{MAX([Order Date (new)])},TODAY()-1),[Order Date])</code></pre>
+							<p>After deciding what I wanted to include in the dashboard and how I wanted users to interact, I started by creating custom date parameters to allow the user to either pick from a list 
+								of common periods (Yesterday, Week-to-date, Month-to-date, etc...), or select their own custom date range on which to compare sales. </p>
+								<pre><u>Select Date parameter</u>: Sets the list of date options for the user to select.</pre>
+								<div class="image">
+									<div class="image fit">
+										<img title = "Click to enlarge" src="/images/Select Date parameter.png" alt="" class="center">	
+									</div>
+								</div>
+								<pre><u>Select Date parameter filter</u>: Uses CASE statement to identify whether the KPI falls into the selected date range or not.
+									<code>CASE [Select Date]<br>WHEN 1 THEN DATEDIFF('day', [Order Date], TODAY())  = 1<br>WHEN 2 THEN DATEDIFF('week', [Order Date], TODAY()) = 0  AND [Order Date] < TODAY()<br>...<br>WHEN 12 THEN [Order Date] >= [Start Date] AND [Order Date] <= [End Date]<br>END</code></pre>
+								<pre><u>Comparison Date filter</u>: Uses CASE statement to identify whether the KPI falls into the date range for the previous period so that the differences and % change can be calculated.
+									<code>CASE [Select Date]<br>WHEN 1 THEN DATEDIFF('day', [Order Date], TODAY())  = 2<br>WHEN 2 THEN DATEDIFF('week', [Order Date], TODAY()) = 1 AND DATEPART('weekday', [Order Date]) <= DATEPART('weekday', TODAY())<br>...<br>WHEN 12 THEN [Order Date] >= [Start Date] - [Custom Date (Days in Range)] AND [Order Date] <= [End Date] - [Custom Date (Days in Range)]<br>END</code></pre>
+							<p>I then created a paremeter list for users to filter by their desired KPI. Each KPI has a calculation that refers to the selected period and the comparison period, as well as the difference,
+								% change, and a directional "arrow" to symolize increase, decrease, or flat based on the difference between periods.</p>
+								<pre><u>Select KPI parameter</u>: Sets the list of KPI options for the user to select.</pre>
+								<div class="image">
+									<div class="image fit">
+										<img title = "Click to enlarge" src="/images/Select KPI parameter.png" alt="" class="center">	
+									</div>
+								</div>
+								<pre><u>Selected period KPI</u>: Gets the KPI value within the selected date range.
+									<code>IF [Select Date Parameter Filter] = TRUE<br>THEN [Sales] ELSE 0 END</code></pre>
+								<pre><u>Comparison period KPI</u>: Gets the KPI value within the comparison period range.
+									<code>IF [Comparison Date Filter] = TRUE<br>THEN [Sales] END</code></pre>
+								<pre><u>KPI difference</u>: Calculates the difference between the selected date and comparison date.
+									<code>ZN(SUM([Sales (Selected Date)])) - ZN(SUM([Sales (Comparison Date)]))</code></pre>
+								<pre><u>KPI % change</u>: Calculates the % change between the selected date and comparison date.
+									<code>(SUM([Sales (Selected Date)]) - SUM([Sales (Comparison Date)]))<br>/<br>SUM([Sales (Comparison Date)])</code></pre>
+								<pre><u>Directional arrows</u>: Shows whether the selected KPI has increased, decreased, or remained flat period vs. period.
+									<code>IF [Sales Difference] = 0 THEN "▶ " END<br>IF [Sales Difference] < 0 THEN "▼ " END<br>IF [Sales Difference] > 0 THEN "▲ " END</code></pre>
+							<p>Finally, I calculated the custom KPIs such as ASP (Average Sale Price) and UPT (Units Per Transaction) and started building my worksheets.</p>
 							<h4>Design</h4>
 							<p><u>Executive Dashboard</u>: This dashboard provides a high-level overview of the business for Regional Managers and above to identify KPI trends at a global level. I wanted the most important metrics to be displayed front and center 
 								at the top of the page in what are called BANs (Big A** Numbers), to provide quick context and key takeaways on the business's current performance. </p>
