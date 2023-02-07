@@ -56,10 +56,10 @@
 							<article id="projects">
 								<h2><a href="https://public.tableau.com/app/profile/chase.carlson/viz/InteractiveResume_16713412902270/Dashboard1" class="major">Interactive R&eacute;sum&eacute; | Tableau</a></h2>
 								<a href="https://public.tableau.com/app/profile/chase.carlson/viz/InteractiveResume_16713412902270/Dashboard1"><span class="image main"><img src="images/Interactive Resume.png" alt="" /></span></a>
-								<b>Intro</b>
+								<h4>Intro</h4>
 								<p>What better way is there to get to know me than through interacting with my experiences? I recently saw a LinkedIn post showing some of the creative ways people have made interactive r&eacute;sum&eacute;s in 
 									Tableau and I was inspired to create my own. </p>
-								<b>Purpose</b>
+								<h4>Purpose</h4>
 								<p>I decided to make this r&eacute;sum&eacute; to showcase my technical and creative skills to potential employers in the analytical space. When people think "Store Manager" they don't always associate it with the same
 									skills and responsibilities as a Business or Data Analyst, however, the roles have some extraordinarily similar qualities. <p>
 								</p>A Store Manager, much like a Data Analyst is responsible for analyzing their business using 
@@ -76,7 +76,7 @@
 						<article id="projects">
 							<h2><a href="https://public.tableau.com/app/profile/chase.carlson/viz/GlobalSuperstoreDashboard_16747734773080/ExecutiveDashboard" class="major">Retail Dashboard | Tableau</a></h2>
 							<a href="https://public.tableau.com/app/profile/chase.carlson/viz/InteractiveResume_16713412902270/Dashboard1"><span class="image main"><img src="images/Retail Dashboard.png" alt="" /></span></a>
-							<b>Purpose</b>
+							<h4>Purpose</h4>
 							<p>In this project I wanted to create a retail KPI dashboard that is simple, yet delivers a ton of value to field leaders. The end user wants to be able to:</p>
 							<ul>
 								<li>Flexibly filter by location</li>
@@ -85,16 +85,16 @@
 								<li>Identify which categories, sub-categories, and products drove the biggest performance wins and losses</li>
 								<li>Customize how they can drill into their KPIs to create their own stories based on their uniqe challenges</li>
 							  </ul>
-							<u><b>Preparing the data</u></b>
+							<h4>Preparing the data</h4>
 							  <p>The first thing that I did to set up the data was to join the Orders table with the Returns and People tables, and bring this static dataset up to the current time by using the expression: <p>
-								DATEADD('day',
-								DATEDIFF('day',{MAX([Order Date])},TODAY()-1),
-								[Order Date (old)]). 
+								<pre><code>DATEADD('day',
+									DATEDIFF('day',{MAX([Order Date (new)])},TODAY()-1),
+									[Order Date])</code></pre>
 							<p>After deciding what I wanted to include in the dashboard, I started creating custom date parameters that would allow the user to either pick from a list of common periods (Yesterday, Week-to-date, Month-to-date, etc...), or select 
 								their own custom date range on which to compare sales. I then created a paremeter list for users to select their desired KPI. Each KPI has a calculation that refers to the selected period and the comparison period, as well as a 
 								directional "arrow" to symolize increase, decrease, or flat based on the difference between periods. Finally, I calculated the 
 								custom KPIs such as ASP (Average Sale Price) and UPT (Units Per Transaction) and started building my worksheets.</p>
-							<b>Design</b>
+							<h4>Design</h4>
 							<p><u>Executive Dashboard</u>: This dashboard provides a high-level overview of the business for Regional Managers and above to identify KPI trends at a global level. I wanted the most important metrics to be displayed front and center 
 								at the top of the page in what are called BANs (Big A** Numbers), to provide quick context and key takeaways on the business's current performance. </p>
 							<p>The horizontal bar chart (bottom left) allows the user to drill down on each KPI by location. The user has the flexibility to drill all the way down to the City level to see how individual stores are performing.</p>
@@ -109,7 +109,7 @@
 								that wouldn't have been discovered otherwise. Depending on the business, the ability to see customer level data can help managers build important relationships with customers.</p>
 							<p><u>KPI Detail</u>: Not everyone is a chart and graph person, and no single dashboard is going to display everything... To allow managers flexibility to dive deeper into their numbers, this dashboard allows the user to drill-down KPIs in a number of ways.
 								The user can create a location based view, a category based view, an order priority based view, or any combination.</p>
-							<b>Data Literacy</b>
+							<h4>Data Literacy</h4>
 							<p>To promote data literacy and help users understand how to operate the reports, each dashboard has an instruction overlay providing basic information about how to navigate the report. 
 								The overlay can be closed or opened by selecting the "X" in the top left corner. Each bar chart dynamically highlights the top performing location or product based on the filtered KPI, as well as the period vs. period change.</p>
 							
@@ -120,21 +120,21 @@
 						<article id="projects">
 							<h2><a href="https://public.tableau.com/app/profile/chase.carlson/viz/BellabeatMarketingCaseStudy/Story1" class="major">Bellabeat Case Study | SQL</a></h2>
 							<a href="https://public.tableau.com/app/profile/chase.carlson/viz/BellabeatMarketingCaseStudy/Story1"><span class="image main"><img src="images/Bellabeat Case Study.png" alt="" /></span></a><br>
-							<b>Purpose</b>
+							<h4>Purpose</h4>
 							<p>This case study is the capstone project in the Google Data Analytics Professional Certificate on Coursera. I was provided a dataset from Kaggle on which to analyze trends in fitness tracker usage 
 								to answer key business questions and make high-level recommendations for a wellness brand's marketing strategy (Bellabeat).</p>
 							<p>In this project I take on the role of a data analyst working on the marketing analytics team at Bellabeat, a high-tech manufacturer of health-focused products for women. Bellabeat is a successful 
 								small company, but they aspire to become a larger player in the global smart device market. 
 								I have been tasked with focusing on one of Bellabeat's core products and analyzing smart device data to gain insight into how consumers are already using their devices. The Insights I discover 
 								will then help guide the marketing strategy for the company.</p>
-							<b>Key business questions</b>
+							<u>Key business questions</u>
 							<p>To get started, I was asked to analyze smart device usage data to gain insight into how consumers use non-Bellabeat smart devices. The following questions will guide my analysis:</p>
 							<ol type="1">
 									<li>What are some trends in smart device usage?</li>
 									<li>How could these trends apply to Bellabeat customers?</li>
 									<li>How could these trends help influence Bellabeat marketing strategy?</li>
 							</ol>
-							<b>About the data</b>
+							<h4>About the data</h4>
 							<p>I was provided a dataset on which to perform my analysis:<p>
 							<ul>
 								<li><a href="https://www.kaggle.com/datasets/arashnic/fitbit"> FitBit Fitness Tracker Data</a> (CC0: Public Domain, dataset made available through <a href="https://www.kaggle.com/arashnic">Mobius</a>): This Kaggle data set
@@ -150,12 +150,12 @@
 								<li>Not all devices tracked the same information (i.e. sleep and weight log data), so results using that data will be less reliable.</li>
 								<li>This data set is 7 years old. Both Bellabeat and Fitbit have since come out with new devices and technology that have impacted the way people use their devices.</li>
 							</ol></p>
-							<b>Preparing the data</b>
+							<h4>Preparing the data</h4>
 							<p>After creating a database in MySQL and importing all of the csv files, I started by checking the basic statistics and cleaning the data. I went through and 
 								removed duplicate records and outliers that would skew the data, renamed and formatted columns for consistency, and merged tables to compare sleep and weight log data alongside 
 								other daily activity. I have uploaded my SQL scripts with detailed notes to my GitHub page <a href="https://github.com/Chaser260/Bellabeat-Marketing-Case-Study-Tableau">here</a>.
 							</p>
-							<b>Designing the dashboard</b>
+							<h4>Designing the dashboard</h4>
 							<p>I decided to make this a Tableau story where I could present my findings in a similar method as a PPT presentation. There are 4 different slides excluding the title page.<p>
 							<p><u>Overview</u>: I provide a brief explanation of the project and the business task.</p>
 							<p><u>Analysis</u>: I briefly describe the tools I used to complete the analysis, and the questions I wanted to answer while exploring the data.</p>
@@ -170,7 +170,7 @@
 						<article id="projects">
 							<h2><a href="https://github.com/Chaser260/PDX-weather" class="major">PDX Weather Analysis | R</a></h2>
 							<a href="https://github.com/Chaser260/PDX-weather"><span class="image main"><img src="images/PDX Weather Analysis.png" alt="" /></span></a><br>
-							<b>Purpose</b>
+							<h4>Purpose</h4>
 							<p>I'm fascinated by climate change and weather related events. To develop my skills with the program language R, I pulled real climate data for the PDX weather station dating back to 1938 from NOAA.gov, to help me visualize what climate in Portland has looked like over the last 84 years.</p>
 							<p>Prior to moving to Portland in 2011, I lived in Bend, OR. Growing up, all I ever heard about was how wet and rainy Portland was. People made it sound like Portland never saw the sun. In my exploration of the data, I found some interesting facts relating to precipitation, snow, and temperature change in Portland. All this Portland data made me curious to compare it to my home town of Bend, OR.<p>
 							<p>Spoiler alert! Although the average temperature in Portland has been rising over the past 80 years, temperatures in Bend have actually declined! </p>
@@ -180,13 +180,13 @@
 								I imported the data and performed a pivot_wider function to change it from long format to wide to get each of the variables into separate columns. The only variables I was interested in were: date, tmax, tmin, prcp, & snow. I also had to use the lubridate package to adjust 
 								the date format to be in ymd format instead of just a string of numbers. Once my table format was established, I saved it to a variable called pdx_weather, and saved it as the source file on which
 								to run future analyses. Now, I can come back to it at any time and run the script to get updated climate data.</p>
-							<b>Analysis</b>
+							<h4>Analysis</h4>
 							<p>The first thing I wanted to look at was precipitation and snow data. To get started it's always a good idea to make sure the data makes sense. I first went through and checked for outliers by visualizing the data using a line plot and a histogram.
 								I initially thought there might have been something wrong with the snow data, but after searching the date on Google, I discovered that over 40 inches of snow actually did dump on Portland in January of 1950! 
 								See the figure below:</p>
 							<div class="image">
 								<div class="image fit">
-									<img src="/images/pdx_cumulative_snowfall.png" alt="" class="center">
+									<img title = "Click to enlarge" src="/images/pdx_cumulative_snowfall.png" alt="" class="center">
 									<div class="description"><h6>PDX snowfall 1950</h6></div>	
 								</div>
 							</div>
@@ -195,7 +195,7 @@
 								I came up with the following visual with a nother striking view how snow is distributed throughout the year: 
 							</p>
 								<div class="image fit"> 
-									<img src="/images/pdx_snow_by_month.png" alt="" class="center">
+									<img title = "Click to enlarge" src="/images/pdx_snow_by_month.png" alt="" class="center">
 									<div class="description"><h6>PDX snow by month</h6></div>
 								</div>
 							
@@ -206,12 +206,12 @@
 							</p>
 							<div class="image">
 								<div class="image fit">
-									<img src="/images/current_prcp.png" alt="" class="center">
+									<img title = "Click to enlarge" src="/images/current_prcp.png" alt="" class="center">
 									<div class="description"><h6>PDX precipitation 2022</h6></div>
 								</div>
 
 								<div class="image fit">
-									<img src="/images/max_prcp.png" alt="" class="center"> 
+									<img title = "Click to enlarge" src="/images/max_prcp.png" alt="" class="center"> 
 									<div class="description"><h6>PDX precipitation 1996</h6></div>
 								</div>
 							</div>
@@ -220,24 +220,25 @@
 							</p>
 							<div class="image">
 								<div class="image fit">
-									<img src="/images/temp_precipitation_line.png" alt="" class="center">
+									<img title = "Click to enlarge" src="/images/temp_precipitation_line.png" alt="" class="center">
 									<div class="description"><h6>Temperature Vs. Precipitation</h6></div>
 								</div>
 							</div>
 							<p>Then I put tmax and prcp into a scatterplot and ran a correlation test:</p>
 							<div class="image">
 								<div class="image fit">
-									<img src="/images/temp_precipitation_scatterplot.png" alt="" class="center">
+									<img title = "Click to enlarge" src="/images/temp_precipitation_scatterplot.png" alt="" class="center">
 									<div class="description"><h6>Temperature Vs. Precipitation 2</h6></div>
 								</div>
 							</div>	
 							<p>No significant relationship exists between temperature and precipitation.</p>	
+							<h4>Temperature</h4>
 							<p>2022 was a hot year, so I wanted to dive deeper into this temperature change next. I wanted to be able to see how the average temperature in 2022 compared to historical temps. I found a few interesting ways to visualize this.</p>
-							   A line chart that shows PDX temperature change (above or below the normalized mean) by month, with 2022 highlighted in dodgerblue, and all other years in light gray. This chart you can see in this chart that July through October were some
+							   A line chart that shows PDX temperature change (above or below the normalized mean) by month, with 2022 highlighted in dodgerblue, and all other years in light gray. You can see in this chart that July through October were some
 							   of the hottest months on record, between 5-10 degrees hotter than average.</p>
 							<div class="image">
 								<div class="image fit">
-									<img src="/images/pdx_average_annual_temp.png" alt="" class="center">
+									<img title = "Click to enlarge" src="/images/pdx_average_annual_temp.png" alt="" class="center">
 									<div class="description"><h6>Temperature Vs. Precipitation 2</h6></div>
 								</div>
 							</div>	
@@ -246,7 +247,7 @@
 								the hottest September and Octobers on record at PDX.</p>	
 							<div class="image">
 								<div class="image fit">
-									<img src="/images/PDX_Record_Heat_October.png" alt="" class="center">
+									<img title = "Click to enlarge" src="/images/PDX_Record_Heat_October.png" alt="" class="center">
 									<div class="description"><h6>Record Heat</h6></div>
 								</div>
 							</div>
@@ -259,8 +260,90 @@
 						<article id="projects">
 							<h2><a href="https://public.tableau.com/app/profile/chase.carlson/viz/LebronJamesCareerStats_16615631128000/Dashboard1" class="major">LeBron James Stats | Excel</a></h2>
 							<a href="https://public.tableau.com/app/profile/chase.carlson/viz/LebronJamesCareerStats_16615631128000/Dashboard1"><span class="image main"><img src="images/LeBron James Stats.png" alt="" /></span></a>
-							<p>For this project, I pulled dozens of tables from the nba.com stats pages and used powerquery to merge all of the files into a single Excel doc. From there, I used formulas to add several columns to the data to include location data for each game, as well as whether the game was home or away. I then used 
-								Tableau to analyze and visualize his Win/Loss and Points statistics.</p>
+							<h4>Purpose</h4>
+							<p>This was my first self-guided project using Tableau to create a visualization. I love following all the G.O.A.Ts in their respective sports, but I was particularly interested in how I could display their 
+								stats in visual form. I decided to focus on Lebron because I knew he was getting close to breaking the all-time scoring record held by Kareem Abdul Jabar for the last 30 years. I wanted to see how he scored
+								against each team he played against and where he has his best W/L ratio.
+							</p>
+							<h4>Process</h4>
+							<p>For this project, I pulled dozens of tables from the nba.com stats pages and used powerquery to merge all of the files into a single Excel doc. To prepare the data for analysis, I used Text to Columns to
+								separate Date, Team, OPP, and home vs. away into separate columns, and then I replaced the "vs."" and "@" symbols with "home" and "away". I used Google Maps to get the latitude, longitude and name for each stadium, 
+								and created a stadium reference sheet and used IF statements to populate the arena name, city, and state columns for each game. This allowed me to make the following transformation:</p>
+								<div class="image">
+									<div class="image fit">
+										<img title = "Click to enlarge" src="/images/before.png" alt="" class="center">
+										<div class="description"><h6>Before</h6></div>
+									</div>
+								</div>
+								<div class="image">
+									<div class="image fit">
+										<img title = "Click to enlarge" src="/images/after.png" alt="" class="center">
+										<div class="description"><h6>After</h6></div>
+									</div>
+								</div>
+								<p>From here, I used formulas to pull over his W's and L's for each opponent to the stadium list to summarize his W/L ratio to be used as a hotspot map in Tableau. I used the following formulas: </p>
+							<pre>Wins and Losses<code>=COUNTIFS(lebron_career_stats!$J:$J, "W", lebron_career_stats!$C:$C,'stadium list'!A2)</code></pre>
+							<pre>Win/Loss Ratio<code>=H2/SUM(H2:I2)</code></pre>
+							<p>This was the result:</p>
+							<div class="image">
+								<div class="image fit">
+									<img title = "Click to enlarge" src="/images/stadium_list.png" alt="" class="center">
+									<div class="description"><h6>Stadium List</h6></div>
+								</div>
+							</div>
+							<p>Next I loaded this data into Tableau to begin visualizing. I wanted three basic elements to my dashboard:
+							<ul>
+								<li>A chart to see his average PPG against each opponent for each team he has played for </li>
+								<li>A visual that shows his points scored in every game, the team he played for, and his opponent</li>
+								<li>A visual that shows where he plays the best based on his W/L ratio</li>
+							</ul>
+							<h4>Average points by opponent</h4>
+							<p>For this visual I arranged Team dimension on the rows shelf and the OPP dimension on the columns shelf. I added AVG(PTS) to Label  
+							on the Marks card as well as to the color mark to create a highlight table. As the Lakers are his current team, I chose a color scale from white to purple to represent 
+							his performance. It's interesting to see that he has consistently performed worst agains LAC on all three teams he has played for, yet he performed much better against
+							the Lakers even though they play in the same stadium. And he clearly holds a grudge against his former team in CLE, as he has a career best 34.6 points per game against the Cavs
+							and a 94.4% W/L ratio.</p>
+							<div class="image">
+								<div class="image fit">
+									<img title = "Click to enlarge" src="/images/Points highlight chart.png" alt="" class="center">
+									<div class="description"><h6>Points Highlight Chart</h6></div>
+								</div>
+							</div>
+							<h4>Radial Bar Chart</h4> 
+							<p>Being new to Tableau, this one took some help and inspiration from fellow vizz artists online. I've seen several radial bar charts while browsing
+							through Tableau visualizations and I thought this would be the perfect opportunity to learn how to create one. With the help of my good friend Youtube, I learned I needed to union 
+							my data to itself to create the calculated fields I needed:</p>
+							<pre><u>Path Order</u>: Dimension that determines the inner and outer dots on each line<code>IIF([Table Name]="lebron_career_stats",0,1)</code></pre>
+							<pre><u>Radial Field</u>: Determines the measure to be used and the length of the bars<code>[PTS]</code></pre>
+							<pre><u>Radial Angle</u>: Looks down the table using the index function to give a form of ordinality and calculates which angle Tableau needs to plot each line<code>(INDEX()-1 * (1/WINDOW_COUNT(COUNT([Radial Field]))) * 2 * PI())</code></pre>
+							<pre><u>Radial Normalized Length</u>: calculates the length of the bars and how far away from the center Tableau should plot the inner and outer points<code>[Radial Inner] + IIF(ATTR([Path Order]) = 0, 0, SUM([Radial Field])/WINDOW_MAX(SUM([Radial Field])) * ([Radial Outer]-[Radial Inner]))</code></pre>
+							<pre><u>Radial X & Radial Y</u>: Trigonometry functions that calculate the point on the X and Y axis where we want to place the start and end points (COS for X & SIN for Y)<code>[Radial Normalized Length] * COS([Radial Angle])
+								[Radial Normalized Length] * SIN([Radial Angle])</code></pre>
+							<p>I also created two parameters called Radial Inner and Radial Outer so the normalized length calculation had something to work with.</p>
+							<p>Now that I had all my calculations needed for the chart, the first step was to switch the chart type to line and drag the Path Order dimension onto the path card. 
+							Then drag the Radial X and Radial Y pills onto the columns and rows shelves respectively. Next I added the Date pill to the detail card to make each bar correspond to a particular game,
+							and changed the calculations on the X and Y axis to compute using Date. From there, I just had to add the Team pill to the color card to see which team Lebron played on for each game 
+							and make some minor adjustments to the size of the circle, and voila! I had my chart.</p>
+							<div class="image">
+								<div class="image fit">
+									<img title = "Click to enlarge" src="/images/Radial Bar Chart.png" alt="" class="center">
+									<div class="description"><h6>Radial Bar Chart</h6></div>
+								</div>
+							</div>
+							<h4>Hotspot Map</h4>
+							<p>The final step to have all of the elements for my dashboard was to utilize that location data I worked so hard for earlier and visualize his W/L ratio on a map.
+								To do this, I added the Longitude pill to the columns shelf and the latitude pill to the rows shelf to get my map. Then I added the arena pill to the detail card to get the marks over
+								each arena location. Finally, I added PTS to the size card and made sure it aggregated by AVG, and then W/L Ratio to the color card to make his best W/L ratio a deep shade of purple
+								and his lowest W/L ratio a light gray.</p>
+								<div class="image">
+									<div class="image fit">
+										<img title = "Click to enlarge" src="/images/Hotspot Map.png" alt="" class="center">
+										<div class="description"><h6>Hot Spot Map</h6></div>
+									</div>
+								</div>
+							<h4>Conclusion</h4>
+							<p>This was a great project to get me started on learning Tableau. It helped me find specific Youtube channels to subscribe to that can help me in future projects, and I got tons of practice finding answers through the Tableau community forums
+								and Stack Overflow. If I had to do this project over, I would love to try to establish a live connection with the data so that it is easier to update and doesn't become outdated.</p>
 						</article>
 
 						<!-- About -->
@@ -568,126 +651,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<!-- <script>
-				// Get the modal
-				var modal = document.getElementById('myModal');
-
-				// Get the image and insert it inside the modal - use its "alt" text as a caption
-				var img = document.getElementById('myImgL');
-				var modalImg = document.getElementById("img01");
-				var captionText = document.getElementById("caption");
-				img.onclick = function(){
-				modal.style.display = "block";
-				modalImg.src = this.src;
-				modalImg.alt = this.alt;
-				captionText.innerHTML = this.alt;
-				}
-
-				// Get the <span> element that closes the modal
-				var span = document.getElementsByClassName("close")[0];
-
-				// When the user clicks on <span> (x), close the modal
-				span.onclick = function() { 
-				modal.style.display = "none";
-				}
-			</script>
-
-			<script>
-				// Get the modal
-				var modal = document.getElementById('myModal');
-
-				// Get the image and insert it inside the modal - use its "alt" text as a caption
-				var img = document.getElementById('myImgR');
-				var modalImg = document.getElementById("img01");
-				var captionText = document.getElementById("caption");
-				img.onclick = function(){
-				modal.style.display = "block";
-				modalImg.src = this.src;
-				modalImg.alt = this.alt;
-				captionText.innerHTML = this.alt;
-				}
-
-				// Get the <span> element that closes the modal
-				var span = document.getElementsByClassName("close")[0];
-
-				// When the user clicks on <span> (x), close the modal
-				span.onclick = function() { 
-				modal.style.display = "none";
-				}
-			</script>
-
-			<script>
-				// Get the modal
-				var modal = document.getElementById('myModal');
-
-				// Get the image and insert it inside the modal - use its "alt" text as a caption
-				var img = document.getElementById('myImgL1');
-				var modalImg = document.getElementById("img01");
-				var captionText = document.getElementById("caption");
-				img.onclick = function(){
-				modal.style.display = "block";
-				modalImg.src = this.src;
-				modalImg.alt = this.alt;
-				captionText.innerHTML = this.alt;
-				}
-
-				// Get the <span> element that closes the modal
-				var span = document.getElementsByClassName("close")[0];
-
-				// When the user clicks on <span> (x), close the modal
-				span.onclick = function() { 
-				modal.style.display = "none";
-				}
-			</script>
-
-			<script>
-				// Get the modal
-				var modal = document.getElementById('myModal');
-
-				// Get the image and insert it inside the modal - use its "alt" text as a caption
-				var img = document.getElementById('myImgR1');
-				var modalImg = document.getElementById("img01");
-				var captionText = document.getElementById("caption");
-				img.onclick = function(){
-				modal.style.display = "block";
-				modalImg.src = this.src;
-				modalImg.alt = this.alt;
-				captionText.innerHTML = this.alt;
-				}
-
-				// Get the <span> element that closes the modal
-				var span = document.getElementsByClassName("close")[0];
-
-				// When the user clicks on <span> (x), close the modal
-				span.onclick = function() { 
-				modal.style.display = "none";
-				}
-			</script>
-
-			<script>
-				// Get the modal
-				var modal = document.getElementById('myModal');
-
-				// Get the image and insert it inside the modal - use its "alt" text as a caption
-				var img = document.getElementById('myImg3');
-				var modalImg = document.getElementById("img01");
-				var captionText = document.getElementById("caption");
-				img.onclick = function(){
-				modal.style.display = "block";
-				modalImg.src = this.src;
-				modalImg.alt = this.alt;
-				captionText.innerHTML = this.alt;
-				}
-
-				// Get the <span> element that closes the modal
-				var span = document.getElementsByClassName("close")[0];
-
-				// When the user clicks on <span> (x), close the modal
-				span.onclick = function() { 
-				modal.style.display = "none";
-				}
-			</script> -->
+			<script src="assets/js/main.js"></script>	
 			
 	</body>
 </html>

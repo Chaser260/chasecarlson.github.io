@@ -260,7 +260,7 @@ input, select, textarea {
 	}
 
 	code {
-		background: rgba(255, 255, 255, 0.075);
+		background: rgba(255, 255, 255, 0.051);
 		border-radius: 4px;
 		font-family: "Courier New", monospace;
 		font-size: 0.9rem;
@@ -269,7 +269,12 @@ input, select, textarea {
 	}
 
 	pre {
-		-webkit-overflow-scrolling: touch;
+		overflow-x: auto;
+		white-space: pre-wrap;
+		white-space: -moz-pre-wrap;
+		white-space: -pre-wrap;
+		white-space: -o-pre-wrap;
+		word-wrap: break-word;
 		font-family: "Courier New", monospace;
 		font-size: 0.9rem;
 		margin: 0 0 2rem 0;
@@ -674,108 +679,6 @@ input, select, textarea {
 				height: 100%;
 			}
 
-		
-			/* #myImgL, #myImgR {
-			border-radius: 5px;
-			cursor: pointer;
-			transition: 0.3s;
-		}
-
-			#myImgL1, #myImgR1 {
-			border-radius: 5px;
-			cursor: pointer;
-			transition: 0.3s;
-		}
-			#myImg3 {
-			border-radius: 5px;
-			cursor: pointer;
-			transition: 0.3s;
-		}
-			
-			#myImgL:hover, #myImgR:hover {opacity: 0.7; width: 200%; height: 200%;}
-			#myImgL1:hover, #myImgR1:hover {opacity: 0.7;}
-			#myImg3:hover {opacity: 0.7;} */
-
-			/* The Modal (background) */
-		/* .modal {
-			display: none; 
-			position: relative; 
-			z-index: 9999; 
-			padding-top: 50px; 
-			padding-left: 50px;
-			padding-right: 50px;
-			top: 50%;
-			left: 50%;
-			width: 750px; 
-			max-width: 100%;
-			overflow: auto; 
-			background-color: rgb(0,0,0); 
-			background-color: rgba(0,0,0,0.90);
-		}
-
-	/* Modal Content (Image) 
-			.modal-content {
-				margin: auto;
-				display: block;
-				width: 750px;
-				max-width: 100%;
-			}
-
-	/* Caption of Modal Image (Image Text) - Same Width as the Image 
-		#caption {
-			margin: auto;
-			display: block;
-			width: 100%;
-			max-width: 700px;
-			text-align: left;
-			color: #ccc;
-			padding: 10px 0;
-			height: 100px;
-		}
-
-	/* Add Animation - Zoom in the modal 
-		.modal-content, #caption {
-			-webkit-animation-name: zoom;
-			-webkit-animation-duration: 0.6s;
-			animation-name: zoom;
-			animation-duration: 0.6s;
-		}
-
-		@-webkit-keyframes zoom {
-			from {-webkit-transform:scale(0)} 
-			to {-webkit-transform:scale(1)}
-		}
-
-		@keyframes zoom {
-			from {transform:scale(0)} 
-			to {transform:scale(1)}
-		}
-
-		/* The Close Button 
-		.close {
-			position: absolute;
-			top: 15px;
-			right: 35px;
-			color: #f1f1f1;
-			font-size: 20px;
-			font-weight: bold;
-			transition: 0.3s;
-		}
-
-		.close:hover,
-		.close:focus {
-			color: #bbb;
-			text-decoration: none;
-			cursor: pointer;
-		}
-
-	/* 100% Image Width on Smaller Screens
-		@media only screen and (max-width: 700px){
-			.modal-content {
-			width: 100%;
-			}
-		} */
-
 		.image.left {
 			float: left;
 			padding: 0 0em 1em 0;
@@ -796,7 +699,9 @@ input, select, textarea {
 			text-align: center;
 			cursor: pointer;
 		}
-		.image.fit:active:hover {width: 200%; height: 200%; left:-50%;}
+		
+		.image.fit:hover {opacity: 0.7;}
+		.image.fit:active:hover {opacity: 1.0; width: 200%; height: 200%; left:-50%;}
 
 		.center {
 			display: block;
@@ -834,7 +739,6 @@ input, select, textarea {
 			}
 
 		}
-
 
 /* List */
 
