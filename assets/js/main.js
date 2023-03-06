@@ -398,4 +398,29 @@
 						$main._show(location.hash.substr(1), true);
 					});
 
+			document.querySelectorAll('.read-more-button').forEach(button => {
+				button.addEventListener('click', () => {
+					const container = button.previousElementSibling;
+					container.style.display = 'block';
+					button.nextElementSibling.style.display = 'inline-block';
+					button.style.display = 'none';
+				});
+			});
+			
+			document.querySelectorAll('.read-less-button').forEach(button => {
+				button.addEventListener('click', () => {
+				  const container = button.previousElementSibling.previousElementSibling;
+				  container.style.display = 'none';
+				  button.previousElementSibling.style.display = 'inline-block';
+				  button.style.display = 'none';
+				  const projectId = button.closest('article').getAttribute('data-project');
+				  const article = document.querySelector(`article[data-project="${projectId}"]`);
+				  const headerHeight = document.querySelector('header').offsetHeight;
+				  window.scrollTo({
+					top: article.getBoundingClientRect().top + window.scrollY - headerHeight,
+					behavior: 'smooth'
+				  });
+				});
+			  });
+
 })(jQuery);
