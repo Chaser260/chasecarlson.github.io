@@ -684,7 +684,7 @@ input, select, textarea {
 			padding: 0 0em 1em 0;
 			top: 0;
 		}
-		.image.left:hover {width: 200%; height: 200%;}
+		.image.left:hover {width: 200%; height: 200%;} 
 
 		.image.right {
 			float: right;
@@ -701,7 +701,50 @@ input, select, textarea {
 		}
 		
 		.image.fit:hover {opacity: 0.7;}
-		.image.fit:active:hover {opacity: 1.0; width: 200%; height: 200%; left:-50%;}
+		
+		/* Popup window styles */
+		.popup {
+			display: none;
+			position: fixed;
+			z-index: 1;
+			padding-top: 100px;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: rgba(0, 0, 0, 0.7);
+		}
+
+		.popup-content {
+			display: block;
+			margin: auto;
+			width: auto;
+			max-width: 90%;
+			max-height: 90%;
+		}
+
+		.popup img {
+			display: block;
+			margin: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		.popup-close {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			color: #fff;
+			font-size: 24px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		.popup-close:hover {
+			color: #f1f1f1;
+		}
+		
 
 		.center {
 			display: block;
@@ -1678,6 +1721,8 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+	/* Read more/Read less button */
 
 		.read-more-container, .read-less-button {
 			display: none;

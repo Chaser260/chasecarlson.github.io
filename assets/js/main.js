@@ -398,7 +398,9 @@
 						$main._show(location.hash.substr(1), true);
 					});
 
-			document.querySelectorAll('.read-more-button').forEach(button => {
+			
+		// Read More/Read Less button
+					document.querySelectorAll('.read-more-button').forEach(button => {
 				button.addEventListener('click', () => {
 					const container = button.previousElementSibling;
 					container.style.display = 'block';
@@ -422,5 +424,46 @@
 				  });
 				});
 			  });
+
+	
+		
+	// select all images with the class "image.fit"
+	var images = document.querySelectorAll('.image.fit');
+
+	// loop through the images and attach a click event listener to each one
+	for (var i = 0; i < images.length; i++) {
+	images[i].addEventListener('click', function() {
+		// create a new image element
+		var img = new Image();
+		// set the source of the new image to the clicked image's source
+		img.src = this.querySelector('img').src;
+
+		// create a new popup window
+		var popup = window.open('', '_blank', 'width=600,height=400');
+
+		// center the popup window on the screen
+		var left = (screen.width - popup.outerWidth) / 2;
+		var top = (screen.height - popup.outerHeight) / 2;
+		popup.moveTo(left, top);
+
+		// wait for the popup window to load before scaling the image
+		popup.addEventListener('load', function() {
+		// calculate the maximum dimensions for the image
+		var maxWidth = popup.innerWidth - 20;
+		var maxHeight = popup.innerHeight - 20;
+
+		// calculate the aspect ratio of the image
+		var ratio = Math.min(maxWidth / img.width, maxHeight / img.height);
+
+		// set the width and height of the image element
+		img.style.width = img.width * ratio + 'px';
+		img.style.height = img.height * ratio + 'px';
+
+		// write the new image element to the popup window
+		popup.document.write('<style>*{margin:0;padding:0;}</style>');
+		popup.document.body.appendChild(img);
+			});
+		});
+	}
 
 })(jQuery);
