@@ -428,38 +428,13 @@
 	
 		
 // select all images with the class "image" or "image.fit"
-var images = document.querySelectorAll('.image, .image.fit');
-
+var images = document.querySelectorAll('.image.fit');
 // loop through the images and attach a click event listener to each one
 for (var i = 0; i < images.length; i++) {
   images[i].addEventListener('click', function() {
-    // create a new image element
-    var img = new Image();
-    // set the source of the new image to the clicked image's source
-    img.src = this.querySelector('img').src;
-
-    // wait for the image to load before adding it to the document
-    img.addEventListener('load', function() {
-      // create a new div to hold the image
-      var imgDiv = document.createElement('div');
-
-      // calculate the maximum dimensions for the image
-      var maxWidth = window.innerWidth - 20;
-      var maxHeight = window.innerHeight - 20;
-
-      // calculate the aspect ratio of the image
-      var ratio = Math.min(maxWidth / img.width, maxHeight / img.height);
-
-      // set the width and height of the image element
-      img.style.width = img.width * ratio + 'px';
-      img.style.height = img.height * ratio + 'px';
-
-      // add the image to the div
-      imgDiv.appendChild(img);
-
-      // add the div to the document body
-      document.body.appendChild(imgDiv);
-    });
+    var img = this.querySelector('img');	
+    	// open the image in a new tab
+		window.open(img.src, '_blank');    
   });
 }
 
