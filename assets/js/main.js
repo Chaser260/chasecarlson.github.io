@@ -427,43 +427,40 @@
 
 	
 		
-	// select all images with the class "image.fit"
-	var images = document.querySelectorAll('.image.fit');
+// select all images with the class "image" or "image.fit"
+var images = document.querySelectorAll('.image, .image.fit');
 
-	// loop through the images and attach a click event listener to each one
-	for (var i = 0; i < images.length; i++) {
-	images[i].addEventListener('click', function() {
-		// create a new image element
-		var img = new Image();
-		// set the source of the new image to the clicked image's source
-		img.src = this.querySelector('img').src;
+// loop through the images and attach a click event listener to each one
+for (var i = 0; i < images.length; i++) {
+  images[i].addEventListener('click', function() {
+    // create a new image element
+    var img = new Image();
+    // set the source of the new image to the clicked image's source
+    img.src = this.querySelector('img').src;
 
-		// create a new popup window
-		var popup = window.open('', '_blank', 'width=600,height=400');
+    // wait for the image to load before adding it to the document
+    img.addEventListener('load', function() {
+      // create a new div to hold the image
+      var imgDiv = document.createElement('div');
 
-		// center the popup window on the screen
-		var left = (screen.width - popup.outerWidth) / 2;
-		var top = (screen.height - popup.outerHeight) / 2;
-		popup.moveTo(left, top);
+      // calculate the maximum dimensions for the image
+      var maxWidth = window.innerWidth - 20;
+      var maxHeight = window.innerHeight - 20;
 
-		// wait for the popup window to load before scaling the image
-		popup.addEventListener('load', function() {
-		// calculate the maximum dimensions for the image
-		var maxWidth = popup.innerWidth - 20;
-		var maxHeight = popup.innerHeight - 20;
+      // calculate the aspect ratio of the image
+      var ratio = Math.min(maxWidth / img.width, maxHeight / img.height);
 
-		// calculate the aspect ratio of the image
-		var ratio = Math.min(maxWidth / img.width, maxHeight / img.height);
+      // set the width and height of the image element
+      img.style.width = img.width * ratio + 'px';
+      img.style.height = img.height * ratio + 'px';
 
-		// set the width and height of the image element
-		img.style.width = img.width * ratio + 'px';
-		img.style.height = img.height * ratio + 'px';
+      // add the image to the div
+      imgDiv.appendChild(img);
 
-		// write the new image element to the popup window
-		popup.document.write('<style>*{margin:0;padding:0;}</style>');
-		popup.document.body.appendChild(img);
-			});
-		});
-	}
+      // add the div to the document body
+      document.body.appendChild(imgDiv);
+    });
+  });
+}
 
 })(jQuery);
