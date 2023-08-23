@@ -5,622 +5,1072 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html lang="eng">
-	<head>
-		<title>Chase Carlson's portfolio website</title>
-		<meta charset="utf-8" />
-		<meta name="description" content="Chase Carlson's data analyst portfolio website. Created to showcase analytical projects to potential employers in the retail industry.">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+	<title>Chase Carlson's portfolio website</title>
+	<meta charset="utf-8" />
+	<meta name="description"
+		content="Chase Carlson's data analyst portfolio website. Created to showcase analytical projects to potential employers in the retail industry.">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="content">
-							<div class="inner">
-								<h1>Chase Carlson</h1>
-								<p>Skilled retail professional with a passion for utilizing data to help people solve problems and make more effective decisions</p>
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="content">
+				<div class="inner">
+					<h1>Chase Carlson</h1>
+					<p>Skilled retail professional with a passion for utilizing data to help people solve problems and
+						make more effective decisions</p>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#intro">Intro</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#about">About Me</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<!--<li><a href="#elements">Elements</a></li>-->
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Intro -->
+			<article id="intro">
+				<h2 class="major">Intro</h2>
+				<p>Welcome to my portfolio! Being a data analyst has always been one of the many hats I wore as a store
+					manager. A data analyst is someone who has the knowledge and skills to turn
+					raw data into actionable insights that help businesses make more effective decisions, they seek to
+					identify solutions to problems and improve processes, and report their findings to
+					management and other key stakeholders. As a retail manager, this was always my favorite hat to wear,
+					which is why I'm looking to take a step away from store management for awhile to focus on
+					my passion for analytics.
+				<p>
+				<p>I am excited to share my work with you. Here you will find analytical projects related to my
+					professional and personal interests, ranging from business dashboards to sports,
+					music, and climate-related vizzes. I am constantly learning new skills and looking forward to
+					bringing you more projects soon!</p>
+			</article>
+
+			<!-- Projects -->
+			<article id="projects" data-project="predicting-student-success">
+				<h2><a title="View on Kaggle" href="https://www.kaggle.com/code/chaser260/predicting-student-success"
+						class="major">Machine Learning: Predicting Student Success With Python</a></h2>
+				<a title="View on Kaggle" href="https://www.kaggle.com/code/chaser260/predicting-student-success"><span
+						class="image main"><img src="/images/dt_Dropout.png"
+							alt="Machine Learning: Predicting Student Success" /></span></a>
+				<h4>Purpose</h4>
+				<p>
+					The ultimate goal of higher education institutions is to prepare students for successful careers and
+					graduate highly qualified candidates into the workforce for the betterment of society.
+					Unfortunately, there are many obstacles and barriers to accomplishing this goal. As of 2021, only
+					33.7% of the population aged 25 and over have completed a bachelor’s degree or higher in the U.S. <a
+						href="https://data.census.gov/table?q=s1501&tid=ACSST5Y2021.S1501" class="major">(US Census
+						Bureau, 2022)</a>, while total enrollment has declined by 1.3 million
+					students at public colleges and universities in the United States between 2010 and 2020 <a
+						href="https://research.collegeboard.org/media/pdf/trends-in-college-pricing-student-aid-2022.pdf"
+						class="major">(Ma & Pender, 2022)</a>.</p>
+
+				<div class="read-more-container">
+					<p>
+						One of the biggest challenges that higher education institutions face is student dropout rates.
+						Of all the students that enroll in a college institution, more than half fail to complete their
+						degree <a
+							href="https://www.forbes.com/sites/markkantrowitz/2021/11/18/shocking-statistics-about-college-graduation-rates/?sh=7134423b2b69"
+							class="major">(Kantrowitz, 2021)</a>. Understanding the reasons why is a crucial first step
+						toward addressing the problem and improving graduation rates.
+					</p>
+					<p>
+						Early detection and intervention for students at risk of dropping out can significantly improve
+						their chances of success. Armed with the right information, educational decision-makers can help
+						provide the right resources at the right time to the students who need them. In addition,
+						institutions can use this data to make changes to university operations that can help facilitate
+						improved graduation rates, such as introducing hybrid and online learning models, DEI
+						initiatives,
+						or the reallocation of resources.
+					</p>
+					<p>
+						A machine learning model that accurately predicts whether a student will drop out or graduate
+						can provide necessary insights and recommendations that enable universities to address the
+						issues causing students to drop out and develop strategies to improve student success. In this
+						analysis, I utilize a Kaggle dataset made available by <a
+							href="https://www.kaggle.com/naveenkumar20bps1137" class="major">Kancharla
+							Naveen Kumar</a> to analyze student success factors and develop multiple supervised machine
+						learning models, including Logistic Regression, Decision Trees, and Random Forest, to classify
+						students into two categories, "Dropout" or "Graduate". The goal is to get the predictive model
+						to correctly label 90% of students into the correct classification.
+					</p>
+					<h4>Conclusion</h4>
+					<p>
+						Based on the results of this analysis, the logistic regression model produces the best overall
+						fit metrics and is the optimal supervised machine learning model to accurately predict student
+						dropouts in this sample population. The logistic regression model accurately predicts 90% of
+						student dropouts and can be used to target communications and allocate resources to help prevent
+						students at risk and only two semesters' worth of data, and the results may not generalize to
+						other institutions. In addition, the lower recall scores on all three models suggest that
+						additional features, including student income factors, housing status (on or off campus), grade
+						point average, employment status, and even faculty data, could be added to help improve the
+						accuracy and reliability of the results to produce fewer false negative results.
+					</p>
+					<p>
+						Check out the full project on <a
+							href="https://www.kaggle.com/code/chaser260/predicting-student-success">Kaggle</a>.
+					</p>
+				</div>
+				<button class="read-more-button">Read more...</button>
+				<button class="read-less-button">Read less...</button>
+			</article>
+			<!-- Projects -->
+			<article id="projects" data-project="hr-analytics">
+				<h2><a title="View on Tableau Public"
+						href="https://public.tableau.com/views/HRPeopleAnalytics_16751399411520/ATTRITIONDASHBOARD?:language=en-US&:display_count=n&:origin=viz_share_link"
+						class="major">HR Attrition Dashboard With Tableau</a></h2>
+				<a title="View on Tableau Public"
+					href="https://public.tableau.com/views/HRPeopleAnalytics_16751399411520/ATTRITIONDASHBOARD?:language=en-US&:display_count=n&:origin=viz_share_link"><span
+						class="image main"><img src="images/hr_attrition_dashboard.webp"
+							alt="HR Attrition Visualization" /></span></a>
+				<h4>Purpose</h4>
+				<p>
+					This project is my entry into the Data In Motion LLC monthly data viz challenge. The assignment was
+					to take on the role of an HR people analyst to find insight on termination trends, department
+					turnover, salary, diversity rates, and more
+					for over 4,000 (not real) employees. I decided to take the approach of creating a dashboard to help
+					us understand what is driving attrition at the company, and what we can do to reduce employee
+					turnover.</p>
+				<div class="read-more-container">
+
+					<h4>The Result</h4>
+					<p>After review, I have concluded there is insufficient data to determine the root-cause of
+						attrition at the company. However, I suspect that the major contributing factors could have to
+						do with the company's salary structure and people practices.
+						These factors appear to have been amplified during COVID, as demand and competition have grown
+						for certain types of roles, and more people in Software, Sales, and Marketing started finding
+						better opportunities and better salaries. I have the
+						following recommendations to help identify the root-cause:</p>
+					<ol>
+						<li>I highly recommend that the company conduct additional research to reevaluate whether their
+							salary is competitive with the market. The departments with the highest turnover impact are
+							Software, Sales, & Marketing, so I would suggest starting
+							here with research.
+						</li>
+						<li>I recommend that the company conduct a deep dive to determine the equity of their pay
+							structure between race and gender, as well as across education levels and qualifications. In
+							my research I found that African Americans are consistently paid
+							around $16,000 below average across all education levels, and employees holding masters
+							degrees (the highest qualification) are paid less than all other education levels.
+						</li>
+						<li>I suggest that the company implement a targeted exit survey that is consistent across
+							departments to clarify additional details and reasoning behind voluntary exits. Since the
+							top 3 reasons: Better salary, more flexible benefits, and found a better
+							opportunity could have the same underlying cause, a supplemental survey could help clarify
+							the reason for leaving. The survey should offer questions and capture notes from the
+							employee about job fit, compensation, company culture, and leadership
+							satisfaction. By better understanding the reasons for leaving, we can effectively determine
+							a path toward employee retention.
+						</li>
+						<li>Without performance related data it is impossible to tell whether the company is losing top
+							performers due to increased competition, or losing performers across the entire rating
+							scale. I recommend adding performance factors to the dataset,
+							along with the previous mentioned recommendations so we can deep dive further.
+						</li>
+					</ol>
+					<h4>Preparing the data</h4>
+					<p>In my initial exploration of the data I combed each field for accuracy and consistency, and to
+						familiarize myself with the dataset. One thing that I noticed was inconsistencies in some of the
+						gender values. For example there were 19 males recorded as "lesbian" and 7 females
+						recorded as "gay". To handle these for visualization purposes, based on the gender options
+						available I assigned any females listed as "gay" to "lesbian", and any males listed as "lesbian"
+						to "gay". Perhaps an early indication of
+						the company's lack of diversity, but there were only 2 employees who identified themselves
+						outside of the Male/Female gender as "Other."</p>
+					<p>Another thing I noticed about the data was that we only had termination data through March, 2022,
+						and the last hire date was December 31, 2021. Since I am unable to determine if this is an
+						incomplete data set (missing hire info for
+						2022), I operated under the assumption that the company has not hired any new employees in 2022
+						yet, and the data collection period ended in March.</p>
+					<p>Finally, I noticed that Tenure is listed in months, so for simplicity in the visuals I converted
+						this value to years to the nearest tenth decimal place.</p>
+					<h4>Analysis</h4>
+					<p><u>Overview</u>: To establish a baseline for the diversity of the company, I created several
+						elements to look at some basic statistics such as the number of active employees, number of
+						ex-employees, attrition %, salary, age, and the tenure of active vs. ex-employees. I put
+						these stats inside of BANs at the top for at-a-glance information as the dashboard is filtered.
+						Beneath, I added a histogram to display the company's attrition trend during the time period
+						covered in the dataset. For added flexibility, I also decided to add filters at the
+						top of the dashboard for gender, education, and race, so that the user could deep dive any or
+						all of these diversity factors.</p>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to open in a new tab" src="/images/hr_bans.webp" alt="Attrition KPIs"
+								class="center">
+							<div class="description">
+								<h6>Company Overview</h6>
 							</div>
 						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#projects">Projects</a></li>
-								<li><a href="#about">About Me</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Intro -->
-						<article id="intro">
-							<h2 class="major">Intro</h2>
-							<p>Welcome to my portfolio! Being a data analyst has always been one of the many hats I wore as a store manager. A data analyst is someone who has the knowledge and skills to turn
-								raw data into actionable insights that help businesses make more effective decisions, they seek to identify solutions to problems and improve processes, and report their findings to 
-								management and other key stakeholders. As a retail manager, this was always my favorite hat to wear, which is why I'm looking to take a step away from store management for awhile to focus on
-								my passion for analytics.<p>
-							<p>I am excited to share my work with you. Here you will find analytical projects related to my professional and personal interests, ranging from business dashboards to sports, 
-								music, and climate-related vizzes. I am constantly learning new skills and looking forward to bringing you more projects soon!</p>
-						</article>
-
-						<!-- Projects -->
-						<article id="projects" data-project="hr-analytics">
-							<h2><a title = "View on Tableau Public" href="https://public.tableau.com/views/HRPeopleAnalytics_16751399411520/ATTRITIONDASHBOARD?:language=en-US&:display_count=n&:origin=viz_share_link" class="major">HR Attrition Dashboard | Tableau</a></h2>
-							<a title = "View on Tableau Public" href="https://public.tableau.com/views/HRPeopleAnalytics_16751399411520/ATTRITIONDASHBOARD?:language=en-US&:display_count=n&:origin=viz_share_link"><span class="image main"><img src="images/hr_attrition_dashboard.webp" alt="HR Attrition Visualization" /></span></a>
-							<h4>Purpose</h4>
-							<p>This project is my entry into the Data In Motion LLC monthly data viz challenge. The assignment was to take on the role of an HR people analyst to find insight on termination trends, department turnover, salary, diversity rates, and more 
-								for over 4,000 (not real) employees. I decided to take the approach of creating a dashboard to help us understand what is driving attrition at the company, and what we can do to reduce employee turnover.</p>
-							<div class="read-more-container">	
-							
-							<h4>The Result</h4>
-							<p>After review, I have concluded there is insufficient data to determine the root-cause of attrition at the company. However, I suspect that the major contributing factors could have to do with the company's salary structure and people practices.
-								These factors appear to have been amplified during COVID, as demand and competition have grown for certain types of roles, and more people in Software, Sales, and Marketing started finding better opportunities and better salaries. I have the 
-								following recommendations to help identify the root-cause:</p>
-							<ol>
-								<li>I highly recommend that the company conduct additional research to reevaluate whether their salary is competitive with the market. The departments with the highest turnover impact are Software, Sales, & Marketing, so I would suggest starting 
-									here with research.
-								</li>
-								<li>I recommend that the company conduct a deep dive to determine the equity of their pay structure between race and gender, as well as across education levels and qualifications. In my research I found that African Americans are consistently paid 
-									around $16,000 below average across all education levels, and employees holding masters degrees (the highest qualification) are paid less than all other education levels.
-								</li>
-								<li>I suggest that the company implement a targeted exit survey that is consistent across departments to clarify additional details and reasoning behind voluntary exits. Since the top 3 reasons: Better salary, more flexible benefits, and found a better
-									opportunity could have the same underlying cause, a supplemental survey could help clarify the reason for leaving. The survey should offer questions and capture notes from the employee about job fit, compensation, company culture, and leadership
-									satisfaction. By better understanding the reasons for leaving, we can effectively determine a path toward employee retention.
-								</li>
-								<li>Without performance related data it is impossible to tell whether the company is losing top performers due to increased competition, or losing performers across the entire rating scale. I recommend adding performance factors to the dataset, 
-									along with the previous mentioned recommendations so we can deep dive further.
-								</li>
-							</ol>
-							<h4>Preparing the data</h4>
-							<p>In my initial exploration of the data I combed each field for accuracy and consistency, and to familiarize myself with the dataset. One thing that I noticed was inconsistencies in some of the gender values. For example there were 19 males recorded as "lesbian" and 7 females 
-								recorded as "gay". To handle these for visualization purposes, based on the gender options available I assigned any females listed as "gay" to "lesbian", and any males listed as "lesbian" to "gay". Perhaps an early indication of 
-								the company's lack of diversity, but there were only 2 employees who identified themselves outside of the Male/Female gender as "Other."</p>
-							<p>Another thing I noticed about the data was that we only had termination data through March, 2022, and the last hire date was December 31, 2021. Since I am unable to determine if this is an incomplete data set (missing hire info for 
-								2022), I operated under the assumption that the company has not hired any new employees in 2022 yet, and the data collection period ended in March.</p>
-							<p>Finally, I noticed that Tenure is listed in months, so for simplicity in the visuals I converted this value to years to the nearest tenth decimal place.</p>
-							<h4>Analysis</h4>
-							<p><u>Overview</u>: To establish a baseline for the diversity of the company, I created several elements to look at some basic statistics such as the number of active employees, number of ex-employees, attrition %, salary, age, and the tenure of active vs. ex-employees. I put 
-								these stats inside of BANs at the top for at-a-glance information as the dashboard is filtered. Beneath, I added a histogram to display the company's attrition trend during the time period covered in the dataset. For added flexibility, I also decided to add filters at the
-								top of the dashboard for gender, education, and race, so that the user could deep dive any or all of these diversity factors.</p>
-							<div class="image">
-								<div class="image fit">
-									<img title = "Click to open in a new tab" src="/images/hr_bans.webp" alt="Attrition KPIs" class="center">	
-									<div class="description"><h6>Company Overview</h6></div>
-								</div>
+					</div>
+					<p><u>Gender, race, & age</u>:Once I had the basic stats identified, the next thing I put together
+						was the demographic visuals to see diversity by gender, race, and age. Based on my initial
+						exploration of the data, I already suspected the company would have opportunities here.
+						To represent gender I decided to use donut charts to show active vs. inactive employee count
+						along with the % of the total population for each gender. I deliberately chose to use color in
+						my visuals to represent active vs. inactive employees, so as to not reinforce gender
+						or racial stereotypes, like the much used pink/blue color palette to represent women and men. In
+						the gender mix I found approximately 60% male vs. 40% female, along with only 2 employees
+						(0.04%) who identified outside of male or female. According to census data, approximately
+						2.3% of the population identifies as transgender or non-binary<sup><a
+								href="https://www.census.gov/library/visualizations/interactive/sexual-orientation-and-gender-identity.html">1</a></sup>.
+					</p>
+					<p>While creating a visual for race, I chose to use donut charts as well. I felt this gave the best
+						representation of each race, all as a part of the whole with equal representation and
+						visibility. Within the racial mix, I found that Caucasian makes up approximately 75% of the
+						organization, while the second largest group is Asian with just over 10% representation,
+						followed by African American, Hispanic, Native American, and "Other," accounting for a combined
+						total of 13.74% of the total population. Although minority groups are underrepresented in
+						the company, the disparity really presented itself in the salary data (more on that later...).
+					</p>
+					<p><u>Age</u>: The best way to represent the age structure of the company was to present it in a
+						vertical column chart. I created 5 bins in which to group employees: &#60;25, 25-34, 35-44,
+						45-54, and 55+. I found that roughly 77% of the company was made up of employees between ages
+						25-44, while people ages 45+ make up a combined total of 8.27% of the company.
+					</p>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/diversity_charts.webp"
+								alt="Race, Gender, Age diversity charts" class="center">
+							<div class="description">
+								<h6>Diversity charts</h6>
 							</div>
-							<p><u>Gender, race, & age</u>:Once I had the basic stats identified, the next thing I put together was the demographic visuals to see diversity by gender, race, and age. Based on my initial exploration of the data, I already suspected the company would have opportunities here.
-								To represent gender I decided to use donut charts to show active vs. inactive employee count along with the % of the total population for each gender. I deliberately chose to use color in my visuals to represent active vs. inactive employees, so as to not reinforce gender 
-								or racial stereotypes, like the much used pink/blue color palette to represent women and men. In the gender mix I found approximately 60% male vs. 40% female, along with only 2 employees (0.04%) who identified outside of male or female. According to census data, approximately 
-								2.3% of the population identifies as transgender or non-binary<sup><a href="https://www.census.gov/library/visualizations/interactive/sexual-orientation-and-gender-identity.html">1</a></sup>.
-							</p>
-							<p>While creating a visual for race, I chose to use donut charts as well. I felt this gave the best representation of each race, all as a part of the whole with equal representation and visibility. Within the racial mix, I found that Caucasian makes up approximately 75% of the 
-								organization, while the second largest group is Asian with just over 10% representation, followed by African American, Hispanic, Native American, and "Other," accounting for a combined total of 13.74% of the total population. Although minority groups are underrepresented in
-								the company, the disparity really presented itself in the salary data (more on that later...). 
-							</p>
-							<p><u>Age</u>: The best way to represent the age structure of the company was to present it in a vertical column chart. I created 5 bins in which to group employees: &#60;25, 25-34, 35-44, 45-54, and 55+. I found that roughly 77% of the company was made up of employees between ages 
-								25-44, while people ages 45+ make up a combined total of 8.27% of the company.
-							</p>
-							<div class="image">
-								<div class="image fit">
-									<img title = "Click to enlarge" src="/images/diversity_charts.webp" alt="Race, Gender, Age diversity charts" class="center">	
-									<div class="description"><h6>Diversity charts</h6></div>
-								</div>
-							</div>
-							<p><u>Attrition</u>: After getting to know the composition of the company from a people perspective, it was time to look at actual attrition data. I looked at attrition in several different ways, but ultimately I landed on 3 visuals to help identify who was leaving the company and why.
-								I wanted to investigate attrition by tenure, by department, and by reason. Starting with tenure, I noticed that 82% of turnover within the first year was voluntary, while 18% was involuntary. High voluntary turnover in the first year could indicate that new employees are having a
-								hard time adjusting to, or feeling accepted by the current culture. </p>
-							<p>When investigating attrition by department, I noticed that Software and Sales combined for approximately one-third of all voluntary terminations. No particular sub-departments stood out as a significant source of turnover within the categories, however, both are highly competitive 
-								roles that have grown in demand since the start of COVID. 
-							</p>
-							<p>To attempt to answer the question of why employees are leaving, and spiked from 2021-2022, I created a visual to see termination reasons by department. Here I discovered a common theme that "better salary," "more flexible benefits," and "found a better opportunity"
-								were consistently the top 3 reasons for voluntary terminations across all departments. Unfortunately, however, this does not fully answer the question of why people are leaving. Since many people may place "better salary" under the umbrella of "found a better opportunity," we would
-								need additional data to find the driving causes of each selection. The voluntary reason list is also missing questions relating to job satisfaction, company culture, and leadership satisfaction, which automatically places those factors into a more generic bucket.
-							</p>
-							<p>I also checked to see which populations have the highest attrition rates. I found that: 
-							<ul>
-								<li>Employees with the job type Manager have the highest attrition rate (20%) compared with all other job types. As I looked into this further, I found that the top reason for manager terminations was 
-								"better salary" across nearly all departments.</li>
-								<li>Native American employees have the highest turnover by race at 23.08%, while African Americans have the lowest turnover (13.64%). </li>
-								<li>Employees holding a masters degree have the highest attrition of any education level at 18.91%</li>
-								<li>Females have a slightly higher attrition rate than males, with 18.42% compared to 17.07% for males</li>
-							</ul>
-							<div class="image">
-								<div class="image fit">
-									<img title = "Click to enlarge" src="/images/TerminationsByDept&Reason.webp" alt="Company attrition" class="center">	
-									<div class="description"><h6>Attrition | By Dept & Reason</h6></div>
-								</div>
-							</div>
-							<div class="image">
-								<div class="image fit">
-									<img title = "Click to enlarge" src="/images/manager_attrition_by_reason.webp" alt="Company attrition" class="center">	
-									<div class="description"><h6>Manager Attrition | By Reason</h6></div>
-								</div>
-							</div>
-							<p><u>Salary</u>: Fair and equitable compensation is always an important factor in employee retention. To analyze the salary structure of the company I chose to make two column charts, each with a constant reference line indicating the average salary for all employees. One chart shows
-								salaries for active employees, and the other shows salaries for ex-employees. I also added filters for the entire dashboard to allow me to view salary data by gender, race, and education. I felt that there were a few anomalies that were worth further investigation by the company:</p>
-							<ul>
-								<li>African Americans were consistently paid around $16,000 below average across all education levels (also recall that they have the lowest attrition rate)</li>
-								<li>Employees holding a masters degree, which is the highest qualification, were paid the least of all education levels. In fact, in the case of female employees, people with no degree at all were paid the highest, over $2,300 more than employees holding a masters degree.</li>
-								<li>Former female employees made significantly more on average than active female employees, which is the largest discrepancy between active and inactive employees.</li>
-								<li>Former employees made more on average than active employees across the board, yet the average tenure of active employees exceeds that of former employees by 4.7 years.</li>
-							</ul>
-							<div class="image">
-								<div class="image fit">
-									<img title = "Click to enlarge" src="/images/african_american_avg_salary.webp" alt="Average salary by race" class="center">	
-									<div class="description"><h6>African American Avg Salary</h6></div>
-								</div>
-							</div>
-							<div class="image">
-								<div class="image fit">
-									<img title = "Click to enlarge" src="/images/Active Salary By Education.webp" alt="Average salary by education" class="center">	
-									<div class="description"><h6>Masters is the lowest paid degree</h6></div>
-								</div>
-							</div>
-							<h4>Conclusion</h4>
-							<p>Although we are not able to difinitively conclude that current attrition is caused by salary, the company's salary structure and practices clearly need to be reevaluated by management to ensure fair and equitable pay across races, gender, qualifications, and job performance.</p>
-							<p>Improving the pay structure will help reduce the heavy costs of employee turnover, and ensure the company is retaining its top talent, while replacing low performing individuals with diverse talent from all races and backgrounds. Adding job performance data, job satisfaction ratings, 
-								and additional exit survey questions to this dataset will help pinpoint the root causes of attrition, and help us identify the right actions to take to make the best decision for the business and make progress toward employee retention and job satisfaction.
-							</p>	
 						</div>
-						<button class="read-more-button">Read more...</button>
-						<button class="read-less-button">Read less...</button>
-						</article>
-
-						<!-- Projects -->
-						<article id="projects" data-project="interactive-resume">
-							<h2><a title = "View on Tableau Public" href="https://public.tableau.com/app/profile/chase.carlson/viz/InteractiveResume_16713412902270/Dashboard1" class="major">Interactive R&eacute;sum&eacute; | Tableau</a></h2>
-							<a title = "View on Tableau Public" href="https://public.tableau.com/app/profile/chase.carlson/viz/InteractiveResume_16713412902270/Dashboard1"><span class="image main"><img src="images/interactive_resume.webp" alt="Interactive resume" /></span></a>
-							<h4>Intro</h4>
-							<p>What better way is there to get to know me than through interacting with my experiences? I recently saw a LinkedIn post showing some of the creative ways people have made interactive r&eacute;sum&eacute;s in 
-								Tableau and I was inspired to create my own. </p>
-							<div class="read-more-container">
-							<h4>Purpose</h4>
-							<p>I decided to make this r&eacute;sum&eacute; to showcase my technical and creative skills to potential employers in the analytical space. When people think "Store Manager" they don't always associate it with the same
-								skills and responsibilities as a Business or Data Analyst, however, the roles have some extraordinarily similar qualities. <p>
-							</p>A Store Manager, much like a Data Analyst is responsible for analyzing their business using 
-								whatever analytical tools available to them (Excel, SQL, Tableau, etc...) to identify patterns and trends in the data that help themselves, or their businesses make better decisions. They then take this information and put it together
-								in various forms to communicate their findings and best practices with their peers, managers, and other key stakeholders in weekly, monthly, and quarterly business reviews. Unlike a Data Analyst however, Store Managers are then responsible
-								for developing their own action plans, and then communicating the solution and leading their teams to execute the plan from end-to-end while maintaining responsiblity over success or failure.</p>
-							<p>In this interactive r&eacute;sum&eacute;, you get to see my professional background in a unique way, with additional context that wouldn't fit in a typical one-pager. My work and educational history are presented in a rounded Gantt chart 
-								in the center, with my hard and soft skills represented in the horizontal bubble chart below by half-circles (soft skills) and triangles (hard skills). Something that is not included in my r&eacute;sum&eacute; yet is that I have applied 
-								to receive my master's degree in Global Supply Chain Management at Portland State University, which starts in the Spring of 2023. Once I get admitted I will add it to my timeline as in-progress.<p>
-							</p>Hover over, or click each of the elements to explore!</p>
+					</div>
+					<p><u>Attrition</u>: After getting to know the composition of the company from a people perspective,
+						it was time to look at actual attrition data. I looked at attrition in several different ways,
+						but ultimately I landed on 3 visuals to help identify who was leaving the company and why.
+						I wanted to investigate attrition by tenure, by department, and by reason. Starting with tenure,
+						I noticed that 82% of turnover within the first year was voluntary, while 18% was involuntary.
+						High voluntary turnover in the first year could indicate that new employees are having a
+						hard time adjusting to, or feeling accepted by the current culture. </p>
+					<p>When investigating attrition by department, I noticed that Software and Sales combined for
+						approximately one-third of all voluntary terminations. No particular sub-departments stood out
+						as a significant source of turnover within the categories, however, both are highly competitive
+						roles that have grown in demand since the start of COVID.
+					</p>
+					<p>To attempt to answer the question of why employees are leaving, and spiked from 2021-2022, I
+						created a visual to see termination reasons by department. Here I discovered a common theme that
+						"better salary," "more flexible benefits," and "found a better opportunity"
+						were consistently the top 3 reasons for voluntary terminations across all departments.
+						Unfortunately, however, this does not fully answer the question of why people are leaving. Since
+						many people may place "better salary" under the umbrella of "found a better opportunity," we
+						would
+						need additional data to find the driving causes of each selection. The voluntary reason list is
+						also missing questions relating to job satisfaction, company culture, and leadership
+						satisfaction, which automatically places those factors into a more generic bucket.
+					</p>
+					<p>I also checked to see which populations have the highest attrition rates. I found that:
+					<ul>
+						<li>Employees with the job type Manager have the highest attrition rate (20%) compared with all
+							other job types. As I looked into this further, I found that the top reason for manager
+							terminations was
+							"better salary" across nearly all departments.</li>
+						<li>Native American employees have the highest turnover by race at 23.08%, while African
+							Americans have the lowest turnover (13.64%). </li>
+						<li>Employees holding a masters degree have the highest attrition of any education level at
+							18.91%</li>
+						<li>Females have a slightly higher attrition rate than males, with 18.42% compared to 17.07% for
+							males</li>
+					</ul>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/TerminationsByDept&Reason.webp"
+								alt="Company attrition" class="center">
+							<div class="description">
+								<h6>Attrition | By Dept & Reason</h6>
+							</div>
 						</div>
-						<button class="read-more-button">Read more...</button>
-						<button class="read-less-button">Read less...</button>
-						</article>
-						<!-- Projects -->
-						<article id="projects" data-project="global-superstore-dashboard">
-							<h2><a title = "View on Tableau Public" href="https://public.tableau.com/app/profile/chase.carlson/viz/GlobalSuperstoreDashboard_16747734773080/ExecutiveDashboard" class="major">Retail Dashboard | Tableau</a></h2>
-							<a title = "View on Tableau Public" href="https://public.tableau.com/app/profile/chase.carlson/viz/GlobalSuperstoreDashboard_16747734773080/ExecutiveDashboard"><span class="image main"><img src="images/Retail Dashboard.webp" alt="Retail KPI dashboard" /></span></a>
-							<h4>Purpose</h4>
-							<p>In this project I wanted to create a retail KPI dashboard that is simple, yet delivers a ton of value to field leaders. The end user wants to be able to:</p>
-							<ul>
-								<li>Flexibly filter by location</li>
-								<li>See performance period-over-period</li>
-								<li>Compare performance across stores/regions/markets</li>
-								<li>Identify which categories, sub-categories, and products drove the biggest performance wins and losses</li>
-								<li>Customize how they can drill into their KPIs to create their own stories based on their uniqe challenges</li>
-							  </ul>
-							<div class="read-more-container">	
-							  <h4>Preparing the data</h4>
-							  <p>The first thing that I did to set up the data was to join the Orders table with the Returns and People tables, and bring this static dataset up to the current time by using the expression: <p>
-								<pre><code>DATEADD('day', DATEDIFF('day',{MAX([Order Date (new)])},TODAY()-1),[Order Date])</code></pre>
-							<p>After deciding what I wanted to include in the dashboard and how I wanted users to interact, I started by creating custom date parameters to allow the user to either pick from a list 
-								of common periods (Yesterday, Week-to-date, Month-to-date, etc...), or select their own custom date range on which to compare sales. </p>
-								<pre><u>Select Date parameter</u>: Sets the list of date options for the user to select.</pre>
-								<div class="image">
-									<div class="image fit">
-										<img title = "Click to enlarge" src="/images/Select Date parameter.webp" alt="Tableau parameter" class="center">	
-									</div>
-								</div>
-								<pre><u>Select Date parameter filter</u>: Uses CASE statement to identify whether the KPI falls into the selected date range or not.
+					</div>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/manager_attrition_by_reason.webp"
+								alt="Company attrition" class="center">
+							<div class="description">
+								<h6>Manager Attrition | By Reason</h6>
+							</div>
+						</div>
+					</div>
+					<p><u>Salary</u>: Fair and equitable compensation is always an important factor in employee
+						retention. To analyze the salary structure of the company I chose to make two column charts,
+						each with a constant reference line indicating the average salary for all employees. One chart
+						shows
+						salaries for active employees, and the other shows salaries for ex-employees. I also added
+						filters for the entire dashboard to allow me to view salary data by gender, race, and education.
+						I felt that there were a few anomalies that were worth further investigation by the company:</p>
+					<ul>
+						<li>African Americans were consistently paid around $16,000 below average across all education
+							levels (also recall that they have the lowest attrition rate)</li>
+						<li>Employees holding a masters degree, which is the highest qualification, were paid the least
+							of all education levels. In fact, in the case of female employees, people with no degree at
+							all were paid the highest, over $2,300 more than employees holding a masters degree.</li>
+						<li>Former female employees made significantly more on average than active female employees,
+							which is the largest discrepancy between active and inactive employees.</li>
+						<li>Former employees made more on average than active employees across the board, yet the
+							average tenure of active employees exceeds that of former employees by 4.7 years.</li>
+					</ul>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/african_american_avg_salary.webp"
+								alt="Average salary by race" class="center">
+							<div class="description">
+								<h6>African American Avg Salary</h6>
+							</div>
+						</div>
+					</div>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/Active Salary By Education.webp"
+								alt="Average salary by education" class="center">
+							<div class="description">
+								<h6>Masters is the lowest paid degree</h6>
+							</div>
+						</div>
+					</div>
+					<h4>Conclusion</h4>
+					<p>Although we are not able to difinitively conclude that current attrition is caused by salary, the
+						company's salary structure and practices clearly need to be reevaluated by management to ensure
+						fair and equitable pay across races, gender, qualifications, and job performance.</p>
+					<p>Improving the pay structure will help reduce the heavy costs of employee turnover, and ensure the
+						company is retaining its top talent, while replacing low performing individuals with diverse
+						talent from all races and backgrounds. Adding job performance data, job satisfaction ratings,
+						and additional exit survey questions to this dataset will help pinpoint the root causes of
+						attrition, and help us identify the right actions to take to make the best decision for the
+						business and make progress toward employee retention and job satisfaction.
+					</p>
+				</div>
+				<button class="read-more-button">Read more...</button>
+				<button class="read-less-button">Read less...</button>
+			</article>
+
+			<!-- Projects -->
+			<article id="projects" data-project="interactive-resume">
+				<h2><a title="View on Tableau Public"
+						href="https://public.tableau.com/app/profile/chase.carlson/viz/InteractiveResume_16713412902270/Dashboard1"
+						class="major">Interactive R&eacute;sum&eacute; With Tableau</a></h2>
+				<a title="View on Tableau Public"
+					href="https://public.tableau.com/app/profile/chase.carlson/viz/InteractiveResume_16713412902270/Dashboard1"><span
+						class="image main"><img src="images/interactive_resume.webp"
+							alt="Interactive resume" /></span></a>
+				<h4>Intro</h4>
+				<p>What better way is there to get to know me than through interacting with my experiences? I recently
+					saw a LinkedIn post showing some of the creative ways people have made interactive
+					r&eacute;sum&eacute;s in
+					Tableau and I was inspired to create my own. </p>
+				<div class="read-more-container">
+					<h4>Purpose</h4>
+					<p>I decided to make this r&eacute;sum&eacute; to showcase my technical and creative skills to
+						potential employers in the analytical space. When people think "Store Manager" they don't always
+						associate it with the same
+						skills and responsibilities as a Business or Data Analyst, however, the roles have some
+						extraordinarily similar qualities.
+					<p>
+					</p>A Store Manager, much like a Data Analyst is responsible for analyzing their business using
+					whatever analytical tools available to them (Excel, SQL, Tableau, etc...) to identify patterns and
+					trends in the data that help themselves, or their businesses make better decisions. They then take
+					this information and put it together
+					in various forms to communicate their findings and best practices with their peers, managers, and
+					other key stakeholders in weekly, monthly, and quarterly business reviews. Unlike a Data Analyst
+					however, Store Managers are then responsible
+					for developing their own action plans, and then communicating the solution and leading their teams
+					to execute the plan from end-to-end while maintaining responsiblity over success or failure.</p>
+					<p>In this interactive r&eacute;sum&eacute;, you get to see my professional background in a unique
+						way, with additional context that wouldn't fit in a typical one-pager. My work and educational
+						history are presented in a rounded Gantt chart
+						in the center, with my hard and soft skills represented in the horizontal bubble chart below by
+						half-circles (soft skills) and triangles (hard skills). Something that is not included in my
+						r&eacute;sum&eacute; yet is that I have applied
+						to receive my master's degree in Global Supply Chain Management at Portland State University,
+						which starts in the Spring of 2023. Once I get admitted I will add it to my timeline as
+						in-progress.
+					<p>
+					</p>Hover over, or click each of the elements to explore!</p>
+				</div>
+				<button class="read-more-button">Read more...</button>
+				<button class="read-less-button">Read less...</button>
+			</article>
+			<!-- Projects -->
+			<article id="projects" data-project="global-superstore-dashboard">
+				<h2><a title="View on Tableau Public"
+						href="https://public.tableau.com/app/profile/chase.carlson/viz/GlobalSuperstoreDashboard_16747734773080/ExecutiveDashboard"
+						class="major">Retail Dashboard With Tableau</a></h2>
+				<a title="View on Tableau Public"
+					href="https://public.tableau.com/app/profile/chase.carlson/viz/GlobalSuperstoreDashboard_16747734773080/ExecutiveDashboard"><span
+						class="image main"><img src="images/Retail Dashboard.webp"
+							alt="Retail KPI dashboard" /></span></a>
+				<h4>Purpose</h4>
+				<p>In this project I wanted to create a retail KPI dashboard that is simple, yet delivers a ton of value
+					to field leaders. The end user wants to be able to:</p>
+				<ul>
+					<li>Flexibly filter by location</li>
+					<li>See performance period-over-period</li>
+					<li>Compare performance across stores/regions/markets</li>
+					<li>Identify which categories, sub-categories, and products drove the biggest performance wins and
+						losses</li>
+					<li>Customize how they can drill into their KPIs to create their own stories based on their uniqe
+						challenges</li>
+				</ul>
+				<div class="read-more-container">
+					<h4>Preparing the data</h4>
+					<p>The first thing that I did to set up the data was to join the Orders table with the Returns and
+						People tables, and bring this static dataset up to the current time by using the expression:
+					<p>
+					<pre><code>DATEADD('day', DATEDIFF('day',{MAX([Order Date (new)])},TODAY()-1),[Order Date])</code></pre>
+					<p>After deciding what I wanted to include in the dashboard and how I wanted users to interact, I
+						started by creating custom date parameters to allow the user to either pick from a list
+						of common periods (Yesterday, Week-to-date, Month-to-date, etc...), or select their own custom
+						date range on which to compare sales. </p>
+					<pre><u>Select Date parameter</u>: Sets the list of date options for the user to select.</pre>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/Select Date parameter.webp"
+								alt="Tableau parameter" class="center">
+						</div>
+					</div>
+					<pre><u>Select Date parameter filter</u>: Uses CASE statement to identify whether the KPI falls into the selected date range or not.
 									<code>CASE [Select Date]<br>WHEN 1 THEN DATEDIFF('day', [Order Date], TODAY())  = 1<br>WHEN 2 THEN DATEDIFF('week', [Order Date], TODAY()) = 0  AND [Order Date] &#60; TODAY()<br>...<br>WHEN 12 THEN [Order Date] &#62;= [Start Date] AND [Order Date] &#60;= [End Date]<br>END</code></pre>
-								<pre><u>Comparison Date filter</u>: Uses CASE statement to identify whether the KPI falls into the date range for the previous period so that the differences and % change can be calculated.
+					<pre><u>Comparison Date filter</u>: Uses CASE statement to identify whether the KPI falls into the date range for the previous period so that the differences and % change can be calculated.
 									<code>CASE [Select Date]<br>WHEN 1 THEN DATEDIFF('day', [Order Date], TODAY())  = 2<br>WHEN 2 THEN DATEDIFF('week', [Order Date], TODAY()) = 1 AND DATEPART('weekday', [Order Date]) &#60;= DATEPART('weekday', TODAY())<br>...<br>WHEN 12 THEN [Order Date] &#62;= [Start Date] - [Custom Date (Days in Range)] AND [Order Date] &#60;= [End Date] - [Custom Date (Days in Range)]<br>END</code></pre>
-							<p>I then created a paremeter list for users to filter by their desired KPI. Each KPI has a calculation that refers to the selected period and the comparison period, as well as the difference,
-								% change, and a directional "arrow" to symolize increase, decrease, or flat based on the difference between periods.</p>
-								<pre><u>Select KPI parameter</u>: Sets the list of KPI options for the user to select.</pre>
-								<div class="image">
-									<div class="image fit">
-										<img title = "Click to enlarge" src="/images/Select KPI parameter.webp" alt="Tableau parameter" class="center">	
-									</div>
-								</div>
-								<pre><u>Selected period KPI</u>: Gets the KPI value within the selected date range.
+					<p>I then created a paremeter list for users to filter by their desired KPI. Each KPI has a
+						calculation that refers to the selected period and the comparison period, as well as the
+						difference,
+						% change, and a directional "arrow" to symolize increase, decrease, or flat based on the
+						difference between periods.</p>
+					<pre><u>Select KPI parameter</u>: Sets the list of KPI options for the user to select.</pre>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/Select KPI parameter.webp"
+								alt="Tableau parameter" class="center">
+						</div>
+					</div>
+					<pre><u>Selected period KPI</u>: Gets the KPI value within the selected date range.
 									<code>IF [Select Date Parameter Filter] = TRUE<br>THEN [Sales] ELSE 0 END</code></pre>
-								<pre><u>Comparison period KPI</u>: Gets the KPI value within the comparison period range.
+					<pre><u>Comparison period KPI</u>: Gets the KPI value within the comparison period range.
 									<code>IF [Comparison Date Filter] = TRUE<br>THEN [Sales] END</code></pre>
-								<pre><u>KPI difference</u>: Calculates the difference between the selected date and comparison date.
+					<pre><u>KPI difference</u>: Calculates the difference between the selected date and comparison date.
 									<code>ZN(SUM([Sales (Selected Date)])) - ZN(SUM([Sales (Comparison Date)]))</code></pre>
-								<pre><u>KPI % change</u>: Calculates the % change between the selected date and comparison date.
+					<pre><u>KPI % change</u>: Calculates the % change between the selected date and comparison date.
 									<code>(SUM([Sales (Selected Date)]) - SUM([Sales (Comparison Date)]))<br>/<br>SUM([Sales (Comparison Date)])</code></pre>
-								<pre><u>Directional arrows</u>: Shows whether the selected KPI has increased, decreased, or remained flat period vs. period.
+					<pre><u>Directional arrows</u>: Shows whether the selected KPI has increased, decreased, or remained flat period vs. period.
 									<code>IF [Sales Difference] = 0 THEN "▶ " END<br>IF [Sales Difference] &#60; 0 THEN "▼ " END<br>IF [Sales Difference] &#62; 0 THEN "▲ " END</code></pre>
-							<p>Finally, I calculated the custom KPIs such as ASP (Average Sale Price) and UPT (Units Per Transaction) and started building my worksheets.</p>
-							<h4>Design</h4>
-							<p><u>Executive Dashboard</u>: This dashboard provides a high-level overview of the business for Regional Managers and above to identify KPI trends at a global level. I wanted the most important metrics to be displayed front and center 
-								at the top of the page in what are called BANs (Big A** Numbers), to provide quick context and key takeaways on the business's current performance. </p>
-								<div class="image">
-									<div class="image fit">
-										<img title = "Click to enlarge" src="/images/bans.webp" alt="Retail KPIs" class="center">
-										<div class="description"><h6>BANs</h6></div>	
-									</div>
-								</div>
-							<p>The horizontal bar chart (bottom left) allows the user to drill down on each KPI by location. The user has the flexibility to drill all the way down to the City level to see how individual stores are performing.</p>
-							<div class="image">
-								<div class="image fit">
-									<img title = "Click to enlarge" src="/images/orders_by_location.webp" alt="Orders by location bar chart" class="center">
-									<div class="description"><h6>Horizontal Bar Chart</h6></div>	
-								</div>
+					<p>Finally, I calculated the custom KPIs such as ASP (Average Sale Price) and UPT (Units Per
+						Transaction) and started building my worksheets.</p>
+					<h4>Design</h4>
+					<p><u>Executive Dashboard</u>: This dashboard provides a high-level overview of the business for
+						Regional Managers and above to identify KPI trends at a global level. I wanted the most
+						important metrics to be displayed front and center
+						at the top of the page in what are called BANs (Big A** Numbers), to provide quick context and
+						key takeaways on the business's current performance. </p>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/bans.webp" alt="Retail KPIs" class="center">
+							<div class="description">
+								<h6>BANs</h6>
 							</div>
-							<p>The hotspot map (bottom right) allows the user to quickly compare KPI's at a global level. The color intensity and bubble size indicate KPI performance for each market, country, or region depending on applied filters. Users can click on 
-								a specific country to see details, or use the filters at the top of the page and the map will refocus to show only the selected locations.</p>
-								<div class="image">
-									<div class="image fit">
-										<img title = "Click to enlarge" src="/images/orders_by_country.webp" alt="Orders by country map" class="center">
-										<div class="description"><h6>Hotspot Map</h6></div>	
-									</div>
-								</div>
-							<p><u>Field Dashboard</u>: As an ex-Store Manager, this dashboard has the information that I would expect to see at that level. This dashboard allows managers to dive deeper into the business by 
-								segment, category, sub-category, and customer-level data. Similar to the Executive dashboard, major KPIs that are most relevant to Store Managers are located in BANs at the top of the report. Just below,
-								users can see the current performance trends by Segment and Category/Sub-Category. Rather than creating another view for Category (which contains only Furniture, Office Supplies, and Technology), I allow them to use the filters at the top
-								to control this level of detail in each view.</p>
-								<div class="image">
-									<div class="image fit">
-										<img title = "Click to enlarge" src="/images/orders_by_sub_category.webp" alt="Orders by sub category bar chart" class="center">
-										<div class="description"><h6>Orders | by sub-category</h6></div>	
-									</div>
-								</div>
-							<p>At the bottom of the Field dashboard I created views for the user to see their top and bottom products for each KPI. Managers are able to identify which products are contributing the most and least value to their business
-								so they can make adjustments at the local level to drive sales or fix issues causing poor performance. When I was a store manager, bottom sellers often would often uncover inventory discrepancies preventing products from being sold
-								that wouldn't have been discovered otherwise. Depending on the business, the ability to see customer level data can help managers build important relationships with customers.</p>
-								<div class="image">
-									<div class="image fit">
-										<img title = "Click to enlarge" src="/images/Top 10 by product.webp" alt="Top 10 KPIs by product" class="center">
-										<div class="description"><h6>Top 10 | by product</h6></div>	
-									</div>
-								</div>
-							<p><u>KPI Detail</u>: Not everyone is a chart and graph person, and no single dashboard is going to display everything... To allow managers flexibility to dive deeper into their numbers, this dashboard allows the user to drill-down KPIs in a number of ways.
-								The user can create a location based view, a category based view, an order priority based view, or any combination.</p>
-								<div class="image">
-									<div class="image fit">
-										<img title = "Click to enlarge" src="/images/kpi_drill_down.webp" alt="KPI drill down table" class="center">
-										<div class="description"><h6>KPI drill down table</h6></div>	
-									</div>
-								</div>
-							<h4>Data Literacy</h4>
-							<p>To promote data literacy and help users understand how to operate the reports, each dashboard has an instruction overlay providing basic information about how to navigate the report. 
-								The overlay can be closed or opened by selecting the "X" in the top left corner. Each bar chart dynamically highlights the top performing location or product based on the filtered KPI, as well as the period vs. period change.</p>
-								<div class="image">
-									<div class="image fit">
-										<img title = "Click to enlarge" src="/images/instruction_overlay.webp" alt="Dashboard instructions" class="center">
-										<div class="description"><h6>KPI drill down table</h6></div>	
-									</div>
-								</div>
-							<p>Check out the full dashboard on <a href="https://public.tableau.com/views/GlobalSuperstoreDashboard_16747734773080/ExecutiveDashboard?:language=en-US&:display_count=n&:origin=viz_share_link">Tableau Public</a>.</p>
 						</div>
-						<button class="read-more-button">Read more...</button>
-						<button class="read-less-button">Read less...</button>
-						</article>
-
-						<!-- Projects -->
-						<article id="projects" data-project="bellabeat-case-study">
-							<h2><a title = "View on Tableau Public" href="https://public.tableau.com/app/profile/chase.carlson/viz/BellabeatMarketingCaseStudy/Story1" class="major">Bellabeat Case Study | SQL</a></h2>
-							<a title = "View on Tableau Public" href="https://public.tableau.com/app/profile/chase.carlson/viz/BellabeatMarketingCaseStudy/Story1"><span class="image main"><img src="images/bellabeat_case_study.webp" alt="Bellabeat case study" /></span></a><br>
-							<h4>Purpose</h4>
-							<p>This case study is the capstone project in the Google Data Analytics Professional Certificate on Coursera. I was provided a dataset from Kaggle on which to analyze trends in fitness tracker usage 
-								to answer key business questions and make high-level recommendations for a wellness brand's marketing strategy (Bellabeat).</p>
-							<p>In this project I take on the role of a data analyst working on the marketing analytics team at Bellabeat, a high-tech manufacturer of health-focused products for women. Bellabeat is a successful 
-								small company, but they aspire to become a larger player in the global smart device market. 
-								I have been tasked with focusing on one of Bellabeat's core products and analyzing smart device data to gain insight into how consumers are already using their devices. The Insights I discover 
-								will then help guide the marketing strategy for the company.</p>
-							<div class="read-more-container">	
-							<u>Key business questions</u>
-							<p>To get started, I was asked to analyze smart device usage data to gain insight into how consumers use non-Bellabeat smart devices. The following questions will guide my analysis:</p>
-							<ol type="1">
-									<li>What are some trends in smart device usage?</li>
-									<li>How could these trends apply to Bellabeat customers?</li>
-									<li>How could these trends help influence Bellabeat marketing strategy?</li>
-							</ol>
-							<h4>About the data</h4>
-							<p>I was provided a dataset on which to perform my analysis:<p>
-							<ul>
-								<li><a href="https://www.kaggle.com/datasets/arashnic/fitbit"> FitBit Fitness Tracker Data</a> (CC0: Public Domain, dataset made available through <a href="https://www.kaggle.com/arashnic">Mobius</a>): This Kaggle data set
-									contains personal fitness tracker from thirty three fitbit users. 
-								</li>
-							</ul>
-							<p>Thirty three eligible Fitbit users consented to the submission of personal tracker data, including minute-level output for physical activity, 
-								heart rate, and sleep monitoring. It includes information about daily activity, steps, and heart rate that can be used to explore users’ habits.
-								However, this dataset has several limitations to keep in mind as I explore the data:</p>
-							<ol type="1">
-								<li>The sample size is extremely small, and not all users had 100% participation.</li>
-								<li>There is no way to determine the gender of participants. Since Bellabeat specifically designs products for women, this data set may not be the best representation of Bellabeat's target audience.</li>
-								<li>Not all devices tracked the same information (i.e. sleep and weight log data), so results using that data will be less reliable.</li>
-								<li>This data set is 7 years old. Both Bellabeat and Fitbit have since come out with new devices and technology that have impacted the way people use their devices.</li>
-							</ol></p>
-							<h4>Preparing the data</h4>
-							<p>After creating a database in MySQL and importing all of the csv files, I started by checking the basic statistics and cleaning the data. I went through and 
-								removed duplicate records and outliers that would skew the data, renamed and formatted columns for consistency, and merged tables to compare sleep and weight log data alongside 
-								other daily activity. I have uploaded my SQL scripts with detailed notes to my <a href="https://github.com/Chaser260/Bellabeat-Marketing-Case-Study-Tableau">GitHub</a> page.
-							</p>
-							<h4>Designing the dashboard</h4>
-							<p>I decided to make this a Tableau story where I could present my findings in a similar method as a PPT presentation. There are 4 different slides excluding the title page.<p>
-							<p><u>Overview</u>: I provide a brief explanation of the project and the business task.</p>
-							<p><u>Analysis</u>: I briefly describe the tools I used to complete the analysis, and the questions I wanted to answer while exploring the data.</p>
-							<p><u>Results</u>: I summarize my high level recommendations I for Bellabeat regarding how this information can help guide marketing strategy.</p>
-							<p><u>Interactive Dashboard</u>: I compiled some of the key insights I found into an interactive dashboard with visuals for the various activities. In a presentation, these would likely
-								be static images that display my results, however, for this particular project I wanted to give real viewers the chance to customize their interaction with the data. Therefore, the horizontal activity bar chart and the 
-								sleep vs. activity scatter are both able to to be filtered for different activities.</p>
-							<p style="text-align:right;">See this project also done in <a href="https://github.com/Chaser260/bellabeat-capstone-case-study">R Studio</a></p>
+					</div>
+					<p>The horizontal bar chart (bottom left) allows the user to drill down on each KPI by location. The
+						user has the flexibility to drill all the way down to the City level to see how individual
+						stores are performing.</p>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/orders_by_location.webp"
+								alt="Orders by location bar chart" class="center">
+							<div class="description">
+								<h6>Horizontal Bar Chart</h6>
+							</div>
 						</div>
-						<button class="read-more-button">Read more...</button>
-						<button class="read-less-button">Read less...</button>
-						</article>
+					</div>
+					<p>The hotspot map (bottom right) allows the user to quickly compare KPI's at a global level. The
+						color intensity and bubble size indicate KPI performance for each market, country, or region
+						depending on applied filters. Users can click on
+						a specific country to see details, or use the filters at the top of the page and the map will
+						refocus to show only the selected locations.</p>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/orders_by_country.webp"
+								alt="Orders by country map" class="center">
+							<div class="description">
+								<h6>Hotspot Map</h6>
+							</div>
+						</div>
+					</div>
+					<p><u>Field Dashboard</u>: As an ex-Store Manager, this dashboard has the information that I would
+						expect to see at that level. This dashboard allows managers to dive deeper into the business by
+						segment, category, sub-category, and customer-level data. Similar to the Executive dashboard,
+						major KPIs that are most relevant to Store Managers are located in BANs at the top of the
+						report. Just below,
+						users can see the current performance trends by Segment and Category/Sub-Category. Rather than
+						creating another view for Category (which contains only Furniture, Office Supplies, and
+						Technology), I allow them to use the filters at the top
+						to control this level of detail in each view.</p>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/orders_by_sub_category.webp"
+								alt="Orders by sub category bar chart" class="center">
+							<div class="description">
+								<h6>Orders | by sub-category</h6>
+							</div>
+						</div>
+					</div>
+					<p>At the bottom of the Field dashboard I created views for the user to see their top and bottom
+						products for each KPI. Managers are able to identify which products are contributing the most
+						and least value to their business
+						so they can make adjustments at the local level to drive sales or fix issues causing poor
+						performance. When I was a store manager, bottom sellers often would often uncover inventory
+						discrepancies preventing products from being sold
+						that wouldn't have been discovered otherwise. Depending on the business, the ability to see
+						customer level data can help managers build important relationships with customers.</p>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/Top 10 by product.webp"
+								alt="Top 10 KPIs by product" class="center">
+							<div class="description">
+								<h6>Top 10 | by product</h6>
+							</div>
+						</div>
+					</div>
+					<p><u>KPI Detail</u>: Not everyone is a chart and graph person, and no single dashboard is going to
+						display everything... To allow managers flexibility to dive deeper into their numbers, this
+						dashboard allows the user to drill-down KPIs in a number of ways.
+						The user can create a location based view, a category based view, an order priority based view,
+						or any combination.</p>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/kpi_drill_down.webp" alt="KPI drill down table"
+								class="center">
+							<div class="description">
+								<h6>KPI drill down table</h6>
+							</div>
+						</div>
+					</div>
+					<h4>Data Literacy</h4>
+					<p>To promote data literacy and help users understand how to operate the reports, each dashboard has
+						an instruction overlay providing basic information about how to navigate the report.
+						The overlay can be closed or opened by selecting the "X" in the top left corner. Each bar chart
+						dynamically highlights the top performing location or product based on the filtered KPI, as well
+						as the period vs. period change.</p>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/instruction_overlay.webp"
+								alt="Dashboard instructions" class="center">
+							<div class="description">
+								<h6>KPI drill down table</h6>
+							</div>
+						</div>
+					</div>
+					<p>Check out the full dashboard on <a
+							href="https://public.tableau.com/views/GlobalSuperstoreDashboard_16747734773080/ExecutiveDashboard?:language=en-US&:display_count=n&:origin=viz_share_link">Tableau
+							Public</a>.</p>
+				</div>
+				<button class="read-more-button">Read more...</button>
+				<button class="read-less-button">Read less...</button>
+			</article>
 
-						<!-- Projects -->
-						<article id="projects" data-project="pdx-weather-analysis">
-							<h2><a title = "View on GitHub" href="https://github.com/Chaser260/PDX-weather" class="major">PDX Weather Analysis | R</a></h2>
-							<a title = "View on GitHub" href="https://github.com/Chaser260/PDX-weather"><span class="image main"><img src="images/pdx_weather_analysis.webp" alt="Weather visualization project" /></span></a><br>
-							<h4>Purpose</h4>
-							<p>I'm fascinated by climate change and weather related events. To develop my skills with the program language R, I pulled real climate data for the PDX weather station dating back to 1938 from NOAA.gov, to help me visualize what climate in Portland has looked like over the last 84 years.</p>
-							<p>Prior to moving to Portland in 2011, I lived in Bend, OR. Growing up, all I ever heard about was how wet and rainy Portland was. People made it sound like Portland never saw the sun. In my exploration of the data, I found some interesting facts relating to precipitation, snow, and temperature change in Portland. All this Portland data made me curious to compare it to my home town of Bend, OR.<p>
-							<p>Spoiler alert! Although the average temperature in Portland has been rising over the past 80 years, temperatures in Bend have actually declined! </p>
-							<div class="read-more-container">
-							<b>Preparing the data</b>
-							<p>To start this project, I used the tidyverse package and the read_csv function to establish a live connection with the NOAA.gov site that provides the .csv file for the PDX weather station. 
-								Since the data didn't originally have column headers in the source file, I had to manually locate those in the README file and add them to my import. After determining the columns that I needed, 
-								I imported the data and performed a pivot_wider function to change it from long format to wide to get each of the variables into separate columns. The only variables I was interested in were: date, tmax, tmin, prcp, & snow. I also had to use the lubridate package to adjust 
-								the date format to be in ymd format instead of just a string of numbers. Once my table format was established, I saved it to a variable called pdx_weather, and saved it as the source file on which
-								to run future analyses. Now, I can come back to it at any time and run the script to get updated climate data.</p>
-							<h4>Analysis</h4>
-							<p>The first thing I wanted to look at was precipitation and snow data. To get started it's always a good idea to make sure the data makes sense. I first went through and checked for outliers by visualizing the data using a line plot and a histogram.
-								I initially thought there might have been something wrong with the snow data, but after searching the date on Google, I discovered that over 40 inches of snow actually did dump on Portland in January of 1950! 
-								See the figure below:</p>
-							<div class="image">
-								<div class="image fit">
-									<img title = "Click to enlarge" src="/images/pdx_cumulative_snowfall.webp" alt="Portland snowfall" class="center">
-									<div class="description"><h6>PDX snowfall 1950</h6></div>	
-								</div>
-							</div>
-							<p>To get a better look at snow in Portland, the next thing I did was organize the data so that I could see snow by month. This would allow me to see when it typically starts and stops snowing, and which months get the most snow. To do this I had to reorganize the calendar into
-								a "snow year", which puts any snow that occurs before August is added to the previous calendar year's snow season. I learned that the latest it has ever snowed in Portland is May (1953), and the earliest it has ever snowed was October (1950). Portland also has 9 years on record with no snow.
-								I came up with the following visual with a nother striking view how snow is distributed throughout the year: 
-							</p>
-								<div class="image fit"> 
-									<img title = "Click to enlarge" src="/images/pdx_snow_by_month.webp" alt="Portland monthly snow" class="center">
-									<div class="description"><h6>PDX snow by month</h6></div>
-								</div>
-							
-							<p>After checking the data for anomalies, I moved on to plotting precipitation in a way I could see each year and compare current precipitation to the average precipitation for the last 84 years.
-								I created a line plot where each line represents the cumulative precipitation for a single year. I then added code to highlight the current year in blue, all other years in light gray, and the 
-								mean precipitation in a black smoothed curve. I found that as of June, our precipitation was higher than average, but I was really intrigued to find out what year had the massive spike
-								that dumped over 60 inches! I created the two plots below to find out:
-							</p>
-							<div class="image">
-								<div class="image fit">
-									<img title = "Click to enlarge" src="/images/current_prcp.webp" alt="Portland precipitation 2022" class="center">
-									<div class="description"><h6>PDX precipitation 2022</h6></div>
-								</div>
+			<!-- Projects -->
+			<article id="projects" data-project="bellabeat-case-study">
+				<h2><a title="View on Tableau Public"
+						href="https://public.tableau.com/app/profile/chase.carlson/viz/BellabeatMarketingCaseStudy/Story1"
+						class="major">Bellabeat Case Study With MySQL</a></h2>
+				<a title="View on Tableau Public"
+					href="https://public.tableau.com/app/profile/chase.carlson/viz/BellabeatMarketingCaseStudy/Story1"><span
+						class="image main"><img src="images/bellabeat_case_study.webp"
+							alt="Bellabeat case study" /></span></a><br>
+				<h4>Purpose</h4>
+				<p>This case study is the capstone project in the Google Data Analytics Professional Certificate on
+					Coursera. I was provided a dataset from Kaggle on which to analyze trends in fitness tracker usage
+					to answer key business questions and make high-level recommendations for a wellness brand's
+					marketing strategy (Bellabeat).</p>
+				<p>In this project I take on the role of a data analyst working on the marketing analytics team at
+					Bellabeat, a high-tech manufacturer of health-focused products for women. Bellabeat is a successful
+					small company, but they aspire to become a larger player in the global smart device market.
+					I have been tasked with focusing on one of Bellabeat's core products and analyzing smart device data
+					to gain insight into how consumers are already using their devices. The Insights I discover
+					will then help guide the marketing strategy for the company.</p>
+				<div class="read-more-container">
+					<u>Key business questions</u>
+					<p>To get started, I was asked to analyze smart device usage data to gain insight into how consumers
+						use non-Bellabeat smart devices. The following questions will guide my analysis:</p>
+					<ol type="1">
+						<li>What are some trends in smart device usage?</li>
+						<li>How could these trends apply to Bellabeat customers?</li>
+						<li>How could these trends help influence Bellabeat marketing strategy?</li>
+					</ol>
+					<h4>About the data</h4>
+					<p>I was provided a dataset on which to perform my analysis:
+					<p>
+					<ul>
+						<li><a href="https://www.kaggle.com/datasets/arashnic/fitbit"> FitBit Fitness Tracker Data</a>
+							(CC0: Public Domain, dataset made available through <a
+								href="https://www.kaggle.com/arashnic">Mobius</a>): This Kaggle data set
+							contains personal fitness tracker from thirty three fitbit users.
+						</li>
+					</ul>
+					<p>Thirty three eligible Fitbit users consented to the submission of personal tracker data,
+						including minute-level output for physical activity,
+						heart rate, and sleep monitoring. It includes information about daily activity, steps, and heart
+						rate that can be used to explore users’ habits.
+						However, this dataset has several limitations to keep in mind as I explore the data:</p>
+					<ol type="1">
+						<li>The sample size is extremely small, and not all users had 100% participation.</li>
+						<li>There is no way to determine the gender of participants. Since Bellabeat specifically
+							designs products for women, this data set may not be the best representation of Bellabeat's
+							target audience.</li>
+						<li>Not all devices tracked the same information (i.e. sleep and weight log data), so results
+							using that data will be less reliable.</li>
+						<li>This data set is 7 years old. Both Bellabeat and Fitbit have since come out with new devices
+							and technology that have impacted the way people use their devices.</li>
+					</ol>
+					</p>
+					<h4>Preparing the data</h4>
+					<p>After creating a database in MySQL and importing all of the csv files, I started by checking the
+						basic statistics and cleaning the data. I went through and
+						removed duplicate records and outliers that would skew the data, renamed and formatted columns
+						for consistency, and merged tables to compare sleep and weight log data alongside
+						other daily activity. I have uploaded my SQL scripts with detailed notes to my <a
+							href="https://github.com/Chaser260/Bellabeat-Marketing-Case-Study-Tableau">GitHub</a> page.
+					</p>
+					<h4>Designing the dashboard</h4>
+					<p>I decided to make this a Tableau story where I could present my findings in a similar method as a
+						PPT presentation. There are 4 different slides excluding the title page.
+					<p>
+					<p><u>Overview</u>: I provide a brief explanation of the project and the business task.</p>
+					<p><u>Analysis</u>: I briefly describe the tools I used to complete the analysis, and the questions
+						I wanted to answer while exploring the data.</p>
+					<p><u>Results</u>: I summarize my high level recommendations I for Bellabeat regarding how this
+						information can help guide marketing strategy.</p>
+					<p><u>Interactive Dashboard</u>: I compiled some of the key insights I found into an interactive
+						dashboard with visuals for the various activities. In a presentation, these would likely
+						be static images that display my results, however, for this particular project I wanted to give
+						real viewers the chance to customize their interaction with the data. Therefore, the horizontal
+						activity bar chart and the
+						sleep vs. activity scatter are both able to to be filtered for different activities.</p>
+					<p style="text-align:right;">See this project also done in <a
+							href="https://github.com/Chaser260/bellabeat-capstone-case-study">R Studio</a></p>
+				</div>
+				<button class="read-more-button">Read more...</button>
+				<button class="read-less-button">Read less...</button>
+			</article>
 
-								<div class="image fit">
-									<img title = "Click to enlarge" src="/images/max_prcp.webp" alt="Portland precipitation record 1996" class="center"> 
-									<div class="description"><h6>PDX precipitation 1996</h6></div>
-								</div>
+			<!-- Projects -->
+			<article id="projects" data-project="pdx-weather-analysis">
+				<h2><a title="View on GitHub" href="https://github.com/Chaser260/PDX-weather" class="major">PDX Weather
+						Analysis With RStudio</a></h2>
+				<a title="View on GitHub" href="https://github.com/Chaser260/PDX-weather"><span class="image main"><img
+							src="images/pdx_weather_analysis.webp" alt="Weather visualization project" /></span></a><br>
+				<h4>Purpose</h4>
+				<p>I'm fascinated by climate change and weather related events. To develop my skills with the program
+					language R, I pulled real climate data for the PDX weather station dating back to 1938 from
+					NOAA.gov, to help me visualize what climate in Portland has looked like over the last 84 years.</p>
+				<p>Prior to moving to Portland in 2011, I lived in Bend, OR. Growing up, all I ever heard about was how
+					wet and rainy Portland was. People made it sound like Portland never saw the sun. In my exploration
+					of the data, I found some interesting facts relating to precipitation, snow, and temperature change
+					in Portland. All this Portland data made me curious to compare it to my home town of Bend, OR.
+				<p>
+				<p>Spoiler alert! Although the average temperature in Portland has been rising over the past 80 years,
+					temperatures in Bend have actually declined! </p>
+				<div class="read-more-container">
+					<b>Preparing the data</b>
+					<p>To start this project, I used the tidyverse package and the read_csv function to establish a live
+						connection with the NOAA.gov site that provides the .csv file for the PDX weather station.
+						Since the data didn't originally have column headers in the source file, I had to manually
+						locate those in the README file and add them to my import. After determining the columns that I
+						needed,
+						I imported the data and performed a pivot_wider function to change it from long format to wide
+						to get each of the variables into separate columns. The only variables I was interested in were:
+						date, tmax, tmin, prcp, & snow. I also had to use the lubridate package to adjust
+						the date format to be in ymd format instead of just a string of numbers. Once my table format
+						was established, I saved it to a variable called pdx_weather, and saved it as the source file on
+						which
+						to run future analyses. Now, I can come back to it at any time and run the script to get updated
+						climate data.</p>
+					<h4>Analysis</h4>
+					<p>The first thing I wanted to look at was precipitation and snow data. To get started it's always a
+						good idea to make sure the data makes sense. I first went through and checked for outliers by
+						visualizing the data using a line plot and a histogram.
+						I initially thought there might have been something wrong with the snow data, but after
+						searching the date on Google, I discovered that over 40 inches of snow actually did dump on
+						Portland in January of 1950!
+						See the figure below:</p>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/pdx_cumulative_snowfall.webp"
+								alt="Portland snowfall" class="center">
+							<div class="description">
+								<h6>PDX snowfall 1950</h6>
 							</div>
-							<p>This was all very interesting and fun to learn, but I really wanted to know whether it has been getting wetter or drier over the last 84 years. I also thought it would be a good idea to put this on a line plot.
-								I figured I should see which direction the temperature has been moving also to find out if there is a relationship between temperature and precipitation. I created the faceted line plot below to see this relationship:
-							</p>
-							<div class="image">
-								<div class="image fit">
-									<img title = "Click to enlarge" src="/images/temp_precipitation_line.webp" alt="Portland temperature vs. precipitation correlation" class="center">
-									<div class="description"><h6>Temperature Vs. Precipitation</h6></div>
-								</div>
-							</div>
-							<p>Then I put tmax and prcp into a scatterplot and ran a correlation test:</p>
-							<div class="image">
-								<div class="image fit">
-									<img title = "Click to enlarge" src="/images/temp_precipitation_scatterplot.webp" alt="Portland temperature vs. precipitation correlation" class="center">
-									<div class="description"><h6>Temperature Vs. Precipitation 2</h6></div>
-								</div>
-							</div>	
-							<p>No significant relationship exists between temperature and precipitation.</p>	
-							<h4>Temperature</h4>
-							<p>2022 was a hot year, so I wanted to dive deeper into this temperature change next. I wanted to be able to see how the average temperature in 2022 compared to historical temps. I found a few interesting ways to visualize this.</p>
-							   A line chart that shows PDX temperature change (above or below the normalized mean) by month, with 2022 highlighted in dodgerblue, and all other years in light gray. You can see in this chart that July through October were some
-							   of the hottest months on record, between 5-10 degrees hotter than average.</p>
-							<div class="image">
-								<div class="image fit">
-									<img title = "Click to enlarge" src="/images/pdx_average_annual_temp.webp" alt="Portland average temperature" class="center">
-									<div class="description"><h6>Temperature Vs. Precipitation 2</h6></div>
-								</div>
-							</div>	
-							<p>During our record heatwave during summer of 2022, I saw a scatterplot posted on Twitter that visualized the record heat in California and I figured out how to reproduce the same visual for Portland. This chart has the daily high temps in 
-								gray for each day dating back to 1939, and the current month of interest highlighted in dodgerblue, and a dotted white line representing the normalized mean temp on which I compared. I found that both September and October of 2022 were 
-								the hottest September and Octobers on record at PDX.</p>	
-							<div class="image">
-								<div class="image fit">
-									<img title = "Click to enlarge" src="/images/pdx_record_heat_october.webp" alt="Portland record temperatures" class="center">
-									<div class="description"><h6>Record Heat</h6></div>
-								</div>
-							</div>
-							<p>I can honestly say that this has been my favorite project so far because I can come back to it at any time to update any of the visuals to reflect recent events. I learned a ton about
-								R programming, and I'm excited to continue to produce more projects in the future. If you want to see my code with detailed notes, and the additional comparisons I made with Bend climate data,
-								please check it out on my <a href="https://github.com/Chaser260/PDX-weather">GitHub</a> page!</p>
-							</div>
-							<button class="read-more-button">Read more...</button>
-							<button class="read-less-button">Read less...</button>
-							</article>
+						</div>
+					</div>
+					<p>To get a better look at snow in Portland, the next thing I did was organize the data so that I
+						could see snow by month. This would allow me to see when it typically starts and stops snowing,
+						and which months get the most snow. To do this I had to reorganize the calendar into
+						a "snow year", which puts any snow that occurs before August is added to the previous calendar
+						year's snow season. I learned that the latest it has ever snowed in Portland is May (1953), and
+						the earliest it has ever snowed was October (1950). Portland also has 9 years on record with no
+						snow.
+						I came up with the following visual with a nother striking view how snow is distributed
+						throughout the year:
+					</p>
+					<div class="image fit">
+						<img title="Click to enlarge" src="/images/pdx_snow_by_month.webp" alt="Portland monthly snow"
+							class="center">
+						<div class="description">
+							<h6>PDX snow by month</h6>
+						</div>
+					</div>
 
-						<!-- Projects -->
-						<article id="projects" data-project="lebron-james-stats">
-							<h2><a title = "View on Tableau Public" href="https://public.tableau.com/app/profile/chase.carlson/viz/LebronJamesCareerStats_16615631128000/Dashboard1" class="major">LeBron James Stats | Excel</a></h2>
-							<a title = "View on Tableau Public" href="https://public.tableau.com/app/profile/chase.carlson/viz/LebronJamesCareerStats_16615631128000/Dashboard1"><span class="image main"><img src="images/lebron_james_stats.webp" alt="Lebron James career stats" /></span></a>
-							<h4>Purpose</h4>
-							<p>This was my first self-guided project using Tableau to create a visualization. I performed most of the heavy lifting in Excel prior to importing into Tableau. I'll go more into detail about how I processed
-								the data in Excel below. I love following all the G.O.A.Ts in their respective sports, but I was particularly interested in putting it into a vizz. I decided to focus on Lebron because I knew he was getting 
-								close to breaking the all-time scoring record held by Kareem Abdul Jabar for the last 30 years. I wanted to see how he scored against each team he played against and at which arenas he plays best.
-							</p>
-							<div class="read-more-container">
-							<h4>Process</h4>
-							<p>For this project, I pulled dozens of tables from the nba.com stats pages and used powerquery to merge all of the files into a single Excel doc. To prepare the data for analysis, I used Text to Columns to
-								separate Date, Team, OPP, and home vs. away into separate columns, and then I replaced the "vs."" and "@" symbols with "home" and "away". I used Google Maps to get the latitude, longitude and name for each stadium, 
-								and created a stadium reference sheet and used IF statements to populate the arena name, city, and state columns for each game. This allowed me to make the following transformation:</p>
-								<div class="image">
-									<div class="image fit">
-										<img title = "Click to enlarge" src="/images/before.webp" alt="" class="center">
-										<div class="description"><h6>Before</h6></div>
-									</div>
-								</div>
-								<div class="image">
-									<div class="image fit">
-										<img title = "Click to enlarge" src="/images/after.webp" alt="" class="center">
-										<div class="description"><h6>After</h6></div>
-									</div>
-								</div>
-								<p>From here, I used formulas to pull over his W's and L's for each opponent to the stadium list to summarize his W/L ratio to be used as a hotspot map in Tableau. I used the following formulas: </p>
-							<pre>Wins and Losses<code>=COUNTIFS(lebron_career_stats!$J:$J, "W", lebron_career_stats!$C:$C,'stadium list'!A2)</code></pre>
-							<pre>Win/Loss Ratio<code>=H2/SUM(H2:I2)</code></pre>
-							<p>This was the result:</p>
-							<div class="image">
-								<div class="image fit">
-									<img title = "Click to enlarge" src="/images/stadium_list.webp" alt="NBA stadium list" class="center">
-									<div class="description"><h6>Stadium List</h6></div>
-								</div>
+					<p>After checking the data for anomalies, I moved on to plotting precipitation in a way I could see
+						each year and compare current precipitation to the average precipitation for the last 84 years.
+						I created a line plot where each line represents the cumulative precipitation for a single year.
+						I then added code to highlight the current year in blue, all other years in light gray, and the
+						mean precipitation in a black smoothed curve. I found that as of June, our precipitation was
+						higher than average, but I was really intrigued to find out what year had the massive spike
+						that dumped over 60 inches! I created the two plots below to find out:
+					</p>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/current_prcp.webp"
+								alt="Portland precipitation 2022" class="center">
+							<div class="description">
+								<h6>PDX precipitation 2022</h6>
 							</div>
-							<p>Next I loaded this data into Tableau to begin visualizing. I wanted three basic elements to my dashboard:
-							<ul>
-								<li>A chart to see his average PPG against each opponent for each team he has played for </li>
-								<li>A visual that shows his points scored in every game, the team he played for, and his opponent</li>
-								<li>A visual that shows where he plays the best based on his W/L ratio</li>
-							</ul>
-							<h4>Average points by opponent</h4>
-							<p>For this visual I arranged Team dimension on the rows shelf and the OPP dimension on the columns shelf. I added AVG(PTS) to Label  
-							on the Marks card as well as to the color mark to create a highlight table. As the Lakers are his current team, I chose a color scale from white to purple to represent 
-							his performance. It's interesting to see that he has consistently performed worst agains LAC on all three teams he has played for, yet he performed much better against
-							the Lakers even though they play in the same stadium. And he clearly holds a grudge against his former team in CLE, as he has a career best 34.6 points per game against the Cavs
-							and a 94.4% W/L ratio.</p>
-							<div class="image">
-								<div class="image fit">
-									<img title = "Click to enlarge" src="/images/Points highlight chart.webp" alt="Lebron James points chart" class="center">
-									<div class="description"><h6>Points Highlight Chart</h6></div>
-								</div>
+						</div>
+
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/max_prcp.webp"
+								alt="Portland precipitation record 1996" class="center">
+							<div class="description">
+								<h6>PDX precipitation 1996</h6>
 							</div>
-							<h4>Radial Bar Chart</h4> 
-							<p>Being new to Tableau, this one took some help and inspiration from fellow vizz artists online. I've seen several radial bar charts while browsing
-							through Tableau visualizations and I thought this would be the perfect opportunity to learn how to create one. With the help of my good friend Youtube, I learned I needed to union 
-							my data to itself to create the calculated fields I needed:</p>
-							<pre><u>Path Order</u>: Dimension that determines the inner and outer dots on each line<code>IIF([Table Name]="lebron_career_stats",0,1)</code></pre>
-							<pre><u>Radial Field</u>: Determines the measure to be used and the length of the bars<code>[PTS]</code></pre>
-							<pre><u>Radial Angle</u>: Looks down the table using the index function to give a form of ordinality and calculates which angle Tableau needs to plot each line<code>(INDEX()-1 * (1/WINDOW_COUNT(COUNT([Radial Field]))) * 2 * PI())</code></pre>
-							<pre><u>Radial Normalized Length</u>: calculates the length of the bars and how far away from the center Tableau should plot the inner and outer points<code>[Radial Inner] + IIF(ATTR([Path Order]) = 0, 0, SUM([Radial Field])/WINDOW_MAX(SUM([Radial Field])) * ([Radial Outer]-[Radial Inner]))</code></pre>
-							<pre><u>Radial X & Radial Y</u>: Trigonometry functions that calculate the point on the X and Y axis where we want to place the start and end points (COS for X & SIN for Y)<code>[Radial Normalized Length] * COS([Radial Angle])
+						</div>
+					</div>
+					<p>This was all very interesting and fun to learn, but I really wanted to know whether it has been
+						getting wetter or drier over the last 84 years. I also thought it would be a good idea to put
+						this on a line plot.
+						I figured I should see which direction the temperature has been moving also to find out if there
+						is a relationship between temperature and precipitation. I created the faceted line plot below
+						to see this relationship:
+					</p>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/temp_precipitation_line.webp"
+								alt="Portland temperature vs. precipitation correlation" class="center">
+							<div class="description">
+								<h6>Temperature Vs. Precipitation</h6>
+							</div>
+						</div>
+					</div>
+					<p>Then I put tmax and prcp into a scatterplot and ran a correlation test:</p>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/temp_precipitation_scatterplot.webp"
+								alt="Portland temperature vs. precipitation correlation" class="center">
+							<div class="description">
+								<h6>Temperature Vs. Precipitation 2</h6>
+							</div>
+						</div>
+					</div>
+					<p>No significant relationship exists between temperature and precipitation.</p>
+					<h4>Temperature</h4>
+					<p>2022 was a hot year, so I wanted to dive deeper into this temperature change next. I wanted to be
+						able to see how the average temperature in 2022 compared to historical temps. I found a few
+						interesting ways to visualize this.</p>
+					A line chart that shows PDX temperature change (above or below the normalized mean) by month, with
+					2022 highlighted in dodgerblue, and all other years in light gray. You can see in this chart that
+					July through October were some
+					of the hottest months on record, between 5-10 degrees hotter than average.</p>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/pdx_average_annual_temp.webp"
+								alt="Portland average temperature" class="center">
+							<div class="description">
+								<h6>Temperature Vs. Precipitation 2</h6>
+							</div>
+						</div>
+					</div>
+					<p>During our record heatwave during summer of 2022, I saw a scatterplot posted on Twitter that
+						visualized the record heat in California and I figured out how to reproduce the same visual for
+						Portland. This chart has the daily high temps in
+						gray for each day dating back to 1939, and the current month of interest highlighted in
+						dodgerblue, and a dotted white line representing the normalized mean temp on which I compared. I
+						found that both September and October of 2022 were
+						the hottest September and Octobers on record at PDX.</p>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/pdx_record_heat_october.webp"
+								alt="Portland record temperatures" class="center">
+							<div class="description">
+								<h6>Record Heat</h6>
+							</div>
+						</div>
+					</div>
+					<p>I can honestly say that this has been my favorite project so far because I can come back to it at
+						any time to update any of the visuals to reflect recent events. I learned a ton about
+						R programming, and I'm excited to continue to produce more projects in the future. If you want
+						to see my code with detailed notes, and the additional comparisons I made with Bend climate
+						data,
+						please check it out on my <a href="https://github.com/Chaser260/PDX-weather">GitHub</a> page!
+					</p>
+				</div>
+				<button class="read-more-button">Read more...</button>
+				<button class="read-less-button">Read less...</button>
+			</article>
+
+			<!-- Projects -->
+			<article id="projects" data-project="lebron-james-stats">
+				<h2><a title="View on Tableau Public"
+						href="https://public.tableau.com/app/profile/chase.carlson/viz/LebronJamesCareerStats_16615631128000/Dashboard1"
+						class="major">LeBron James Stats With Excel & Tableau</a></h2>
+				<a title="View on Tableau Public"
+					href="https://public.tableau.com/app/profile/chase.carlson/viz/LebronJamesCareerStats_16615631128000/Dashboard1"><span
+						class="image main"><img src="images/lebron_james_stats.webp"
+							alt="Lebron James career stats" /></span></a>
+				<h4>Purpose</h4>
+				<p>This was my first self-guided project using Tableau to create a visualization. I performed most of
+					the heavy lifting in Excel prior to importing into Tableau. I'll go more into detail about how I
+					processed
+					the data in Excel below. I love following all the G.O.A.Ts in their respective sports, but I was
+					particularly interested in putting it into a vizz. I decided to focus on Lebron because I knew he
+					was getting
+					close to breaking the all-time scoring record held by Kareem Abdul Jabar for the last 30 years. I
+					wanted to see how he scored against each team he played against and at which arenas he plays best.
+				</p>
+				<div class="read-more-container">
+					<h4>Process</h4>
+					<p>For this project, I pulled dozens of tables from the nba.com stats pages and used powerquery to
+						merge all of the files into a single Excel doc. To prepare the data for analysis, I used Text to
+						Columns to
+						separate Date, Team, OPP, and home vs. away into separate columns, and then I replaced the
+						"vs."" and "@" symbols with "home" and "away". I used Google Maps to get the latitude, longitude
+						and name for each stadium,
+						and created a stadium reference sheet and used IF statements to populate the arena name, city,
+						and state columns for each game. This allowed me to make the following transformation:</p>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/before.webp" alt="" class="center">
+							<div class="description">
+								<h6>Before</h6>
+							</div>
+						</div>
+					</div>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/after.webp" alt="" class="center">
+							<div class="description">
+								<h6>After</h6>
+							</div>
+						</div>
+					</div>
+					<p>From here, I used formulas to pull over his W's and L's for each opponent to the stadium list to
+						summarize his W/L ratio to be used as a hotspot map in Tableau. I used the following formulas:
+					</p>
+					<pre>Wins and Losses<code>=COUNTIFS(lebron_career_stats!$J:$J, "W", lebron_career_stats!$C:$C,'stadium list'!A2)</code></pre>
+					<pre>Win/Loss Ratio<code>=H2/SUM(H2:I2)</code></pre>
+					<p>This was the result:</p>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/stadium_list.webp" alt="NBA stadium list"
+								class="center">
+							<div class="description">
+								<h6>Stadium List</h6>
+							</div>
+						</div>
+					</div>
+					<p>Next I loaded this data into Tableau to begin visualizing. I wanted three basic elements to my
+						dashboard:
+					<ul>
+						<li>A chart to see his average PPG against each opponent for each team he has played for </li>
+						<li>A visual that shows his points scored in every game, the team he played for, and his
+							opponent</li>
+						<li>A visual that shows where he plays the best based on his W/L ratio</li>
+					</ul>
+					<h4>Average points by opponent</h4>
+					<p>For this visual I arranged Team dimension on the rows shelf and the OPP dimension on the columns
+						shelf. I added AVG(PTS) to Label
+						on the Marks card as well as to the color mark to create a highlight table. As the Lakers are
+						his current team, I chose a color scale from white to purple to represent
+						his performance. It's interesting to see that he has consistently performed worst agains LAC on
+						all three teams he has played for, yet he performed much better against
+						the Lakers even though they play in the same stadium. And he clearly holds a grudge against his
+						former team in CLE, as he has a career best 34.6 points per game against the Cavs
+						and a 94.4% W/L ratio.</p>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/Points highlight chart.webp"
+								alt="Lebron James points chart" class="center">
+							<div class="description">
+								<h6>Points Highlight Chart</h6>
+							</div>
+						</div>
+					</div>
+					<h4>Radial Bar Chart</h4>
+					<p>Being new to Tableau, this one took some help and inspiration from fellow vizz artists online.
+						I've seen several radial bar charts while browsing
+						through Tableau visualizations and I thought this would be the perfect opportunity to learn how
+						to create one. With the help of my good friend Youtube, I learned I needed to union
+						my data to itself to create the calculated fields I needed:</p>
+					<pre><u>Path Order</u>: Dimension that determines the inner and outer dots on each line<code>IIF([Table Name]="lebron_career_stats",0,1)</code></pre>
+					<pre><u>Radial Field</u>: Determines the measure to be used and the length of the bars<code>[PTS]</code></pre>
+					<pre><u>Radial Angle</u>: Looks down the table using the index function to give a form of ordinality and calculates which angle Tableau needs to plot each line<code>(INDEX()-1 * (1/WINDOW_COUNT(COUNT([Radial Field]))) * 2 * PI())</code></pre>
+					<pre><u>Radial Normalized Length</u>: calculates the length of the bars and how far away from the center Tableau should plot the inner and outer points<code>[Radial Inner] + IIF(ATTR([Path Order]) = 0, 0, SUM([Radial Field])/WINDOW_MAX(SUM([Radial Field])) * ([Radial Outer]-[Radial Inner]))</code></pre>
+					<pre><u>Radial X & Radial Y</u>: Trigonometry functions that calculate the point on the X and Y axis where we want to place the start and end points (COS for X & SIN for Y)<code>[Radial Normalized Length] * COS([Radial Angle])
 								[Radial Normalized Length] * SIN([Radial Angle])</code></pre>
-							<p>I also created two parameters called Radial Inner and Radial Outer so the normalized length calculation had something to work with.</p>
-							<p>Now that I had all my calculations needed for the chart, the first step was to switch the chart type to line and drag the Path Order dimension onto the path card. 
-							Then drag the Radial X and Radial Y pills onto the columns and rows shelves respectively. Next I added the Date pill to the detail card to make each bar correspond to a particular game,
-							and changed the calculations on the X and Y axis to compute using Date. From there, I just had to add the Team pill to the color card to see which team Lebron played on for each game 
-							and make some minor adjustments to the size of the circle, and voila! I had my chart.</p>
-							<div class="image">
-								<div class="image fit">
-									<img title = "Click to enlarge" src="/images/Radial Bar Chart.webp" alt="Radial bar chart" class="center">
-									<div class="description"><h6>Radial Bar Chart</h6></div>
-								</div>
+					<p>I also created two parameters called Radial Inner and Radial Outer so the normalized length
+						calculation had something to work with.</p>
+					<p>Now that I had all my calculations needed for the chart, the first step was to switch the chart
+						type to line and drag the Path Order dimension onto the path card.
+						Then drag the Radial X and Radial Y pills onto the columns and rows shelves respectively. Next I
+						added the Date pill to the detail card to make each bar correspond to a particular game,
+						and changed the calculations on the X and Y axis to compute using Date. From there, I just had
+						to add the Team pill to the color card to see which team Lebron played on for each game
+						and make some minor adjustments to the size of the circle, and voila! I had my chart.</p>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/Radial Bar Chart.webp" alt="Radial bar chart"
+								class="center">
+							<div class="description">
+								<h6>Radial Bar Chart</h6>
 							</div>
-							<h4>Hotspot Map</h4>
-							<p>The final step to have all of the elements for my dashboard was to utilize that location data I worked so hard for earlier and visualize his W/L ratio on a map.
-								To do this, I added the Longitude pill to the columns shelf and the latitude pill to the rows shelf to get my map. Then I added the arena pill to the detail card to get the marks over
-								each arena location. Finally, I added PTS to the size card and made sure it aggregated by AVG, and then W/L Ratio to the color card to make his best W/L ratio a deep shade of purple
-								and his lowest W/L ratio a light gray.</p>
-								<div class="image">
-									<div class="image fit">
-										<img title = "Click to enlarge" src="/images/hotspot_map.webp" alt="Hotspot map" class="center">
-										<div class="description"><h6>Hot Spot Map</h6></div>
-									</div>
-								</div>
-							<h4>Conclusion</h4>
-							<p>This was a great project to get me started on learning Tableau. It helped me find specific Youtube channels to subscribe to that can help me in future projects, and I got tons of practice finding answers through the Tableau community forums
-								and Stack Overflow. If I had to do this project over, I would love to try to establish a live connection with the data so that it is easier to update and doesn't become outdated.</p>
-							<p>Check out the full dashboard on <a href="https://public.tableau.com/views/LebronJamesCareerStats_16615631128000/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link">Tableau Public</a>.</p>
 						</div>
-						<button class="read-more-button">Read more...</button>
-						<button class="read-less-button">Read less...</button>
-						</article>
+					</div>
+					<h4>Hotspot Map</h4>
+					<p>The final step to have all of the elements for my dashboard was to utilize that location data I
+						worked so hard for earlier and visualize his W/L ratio on a map.
+						To do this, I added the Longitude pill to the columns shelf and the latitude pill to the rows
+						shelf to get my map. Then I added the arena pill to the detail card to get the marks over
+						each arena location. Finally, I added PTS to the size card and made sure it aggregated by AVG,
+						and then W/L Ratio to the color card to make his best W/L ratio a deep shade of purple
+						and his lowest W/L ratio a light gray.</p>
+					<div class="image">
+						<div class="image fit">
+							<img title="Click to enlarge" src="/images/hotspot_map.webp" alt="Hotspot map"
+								class="center">
+							<div class="description">
+								<h6>Hot Spot Map</h6>
+							</div>
+						</div>
+					</div>
+					<h4>Conclusion</h4>
+					<p>This was a great project to get me started on learning Tableau. It helped me find specific
+						Youtube channels to subscribe to that can help me in future projects, and I got tons of practice
+						finding answers through the Tableau community forums
+						and Stack Overflow. If I had to do this project over, I would love to try to establish a live
+						connection with the data so that it is easier to update and doesn't become outdated.</p>
+					<p>Check out the full dashboard on <a
+							href="https://public.tableau.com/views/LebronJamesCareerStats_16615631128000/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link">Tableau
+							Public</a>.</p>
+				</div>
+				<button class="read-more-button">Read more...</button>
+				<button class="read-less-button">Read less...</button>
+			</article>
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About Me</h2>
-								<span class="image main"><img src="images/Profile Picture.webp" alt="Chase Carlson" /></span>
-								<p>Hi, my name is Chase, and I am passionate about helping people to better understand their business and make more effective decisions through data analytics, data visualization, and operational efficiency. 
-									I currently hold a bachelor’s degree in Business with an emphasis in Small Business Management & Entrepreneurship. In the Spring of 2023, I will begin pursuing a Master of Science degree in Global 
-									Supply Chain Management at Portland State University. </p>
-								<p>I've spent the last 17 years in retail working directly with customers and front-line employees to deliver world-class retail experiences and business results. Most recently, I was responsible for managing 
-									a team of 15-45 retail employees and analyzing customer insights, sales KPIs, and operational metrics to generate data-driven insights and implement solutions to solve business challenges. As a Store Manager, 
-									I led through significant ambiguity each day to protect the business, improve processes, cut costs, and deliver exceptional experiences for our internal and external customers.</p>
-								<p>I am currently looking to transfer my skills to a global organization where I can challenge myself to solve difficult problems while focusing on developing my analytical skills. My long-term goal is to grow with the company 
-									and continue to advance my knowledge, skills, and contributions at various levels of business analytics to help the organization make more effective and sustainable decisions. If you are a recruiter or a hiring 
-									manager, I would love to share how my experiences will add value to your team.</p>
-								<p><a title = "View on Tableau Public" href="https://public.tableau.com/app/profile/chase.carlson/viz/InteractiveResume_16713412902270/Dashboard1">View my interactive resume</a></p>
-							</article>
+			<!-- About -->
+			<article id="about">
+				<h2 class="major">About Me</h2>
+				<span class="image main"><img src="images/Profile Picture.webp" alt="Chase Carlson" /></span>
+				<p>Hi, my name is Chase, and I am passionate about helping people to better understand their business
+					and make more effective decisions through data analytics, data visualization, and operational
+					efficiency.
+					I currently hold a bachelor’s degree in Business with an emphasis in Small Business Management &
+					Entrepreneurship. In the Spring of 2023, I will begin pursuing a Master of Science degree in Global
+					Supply Chain Management at Portland State University. </p>
+				<p>I've spent the last 17 years in retail working directly with customers and front-line employees to
+					deliver world-class retail experiences and business results. Most recently, I was responsible for
+					managing
+					a team of 15-45 retail employees and analyzing customer insights, sales KPIs, and operational
+					metrics to generate data-driven insights and implement solutions to solve business challenges. As a
+					Store Manager,
+					I led through significant ambiguity each day to protect the business, improve processes, cut costs,
+					and deliver exceptional experiences for our internal and external customers.</p>
+				<p>I am currently looking to transfer my skills to a global organization where I can challenge myself to
+					solve difficult problems while focusing on developing my analytical skills. My long-term goal is to
+					grow with the company
+					and continue to advance my knowledge, skills, and contributions at various levels of business
+					analytics to help the organization make more effective and sustainable decisions. If you are a
+					recruiter or a hiring
+					manager, I would love to share how my experiences will add value to your team.</p>
+				<p><a title="View on Tableau Public"
+						href="https://public.tableau.com/app/profile/chase.carlson/viz/InteractiveResume_16713412902270/Dashboard1">View
+						my interactive resume</a></p>
+			</article>
 
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="https://formsubmit.co/chaser260@gmail.com">
-									<div class="fields">
-										<div class="field half">
-											<label for="name"><i class="fa-solid fa-user"></i> Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message"><i class="fa-solid fa-comments"></i> Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="https://www.linkedin.com/in/carlson-chase/" class="icon brands fa-brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://www.facebook.com/chase.carlson.56/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="https://www.instagram.com/chaser260/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://github.com/Chaser260" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
+			<!-- Contact -->
+			<article id="contact">
+				<h2 class="major">Contact</h2>
+				<form method="post" action="https://formsubmit.co/chaser260@gmail.com">
+					<div class="fields">
+						<div class="field half">
+							<label for="name"><i class="fa-solid fa-user"></i> Name</label>
+							<input type="text" name="name" id="name" />
+						</div>
+						<div class="field half">
+							<label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+							<input type="text" name="email" id="email" />
+						</div>
+						<div class="field">
+							<label for="message"><i class="fa-solid fa-comments"></i> Message</label>
+							<textarea name="message" id="message" rows="4"></textarea>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" class="primary" /></li>
+						<li><input type="reset" value="Reset" /></li>
+					</ul>
+				</form>
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/carlson-chase/"
+							class="icon brands fa-brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.facebook.com/chase.carlson.56/" class="icon brands fa-facebook-f"><span
+								class="label">Facebook</span></a></li>
+					<li><a href="https://www.instagram.com/chaser260/" class="icon brands fa-instagram"><span
+								class="label">Instagram</span></a></li>
+					<li><a href="https://github.com/Chaser260" class="icon brands fa-github"><span
+								class="label">GitHub</span></a></li>
+				</ul>
+			</article>
 
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
+			<!-- Elements -->
+			<article id="elements">
+				<h2 class="major">Elements</h2>
 
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
+				<section>
+					<h3 class="major">Text</h3>
+					<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is
+						<em>emphasized</em>.
+						This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+						This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a
+							href="#">this is a link</a>.
+					</p>
+					<hr />
+					<h2>Heading Level 2</h2>
+					<h3>Heading Level 3</h3>
+					<h4>Heading Level 4</h4>
+					<h5>Heading Level 5</h5>
+					<h6>Heading Level 6</h6>
+					<hr />
+					<h4>Blockquote</h4>
+					<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus
+						euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis
+						iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem
+						ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+					<h4>Preformatted</h4>
+					<pre><code>i = 0;
 
 while (!deck.isInOrder()) {
     print 'Iteration ' + i;
@@ -629,238 +1079,243 @@ while (!deck.isInOrder()) {
 }
 
 print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
+				</section>
 
-								<section>
-									<h3 class="major">Lists</h3>
+				<section>
+					<h3 class="major">Lists</h3>
 
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+					<h4>Unordered</h4>
+					<ul>
+						<li>Dolor pulvinar etiam.</li>
+						<li>Sagittis adipiscing.</li>
+						<li>Felis enim feugiat.</li>
+					</ul>
 
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+					<h4>Alternate</h4>
+					<ul class="alt">
+						<li>Dolor pulvinar etiam.</li>
+						<li>Sagittis adipiscing.</li>
+						<li>Felis enim feugiat.</li>
+					</ul>
 
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
+					<h4>Ordered</h4>
+					<ol>
+						<li>Dolor pulvinar etiam.</li>
+						<li>Etiam vel felis viverra.</li>
+						<li>Felis enim feugiat.</li>
+						<li>Dolor pulvinar etiam.</li>
+						<li>Etiam vel felis lorem.</li>
+						<li>Felis enim et feugiat.</li>
+					</ol>
+					<h4>Icons</h4>
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-brands fa-linkedin"><span
+									class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+					</ul>
 
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
+					<h4>Actions</h4>
+					<ul class="actions">
+						<li><a href="#" class="button primary">Default</a></li>
+						<li><a href="#" class="button">Default</a></li>
+					</ul>
+					<ul class="actions stacked">
+						<li><a href="#" class="button primary">Default</a></li>
+						<li><a href="#" class="button">Default</a></li>
+					</ul>
+				</section>
 
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
-
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
-
-							</article>
-
+				<section>
+					<h3 class="major">Table</h3>
+					<h4>Default</h4>
+					<div class="table-wrapper">
+						<table>
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Description</th>
+									<th>Price</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Item One</td>
+									<td>Ante turpis integer aliquet porttitor.</td>
+									<td>29.99</td>
+								</tr>
+								<tr>
+									<td>Item Two</td>
+									<td>Vis ac commodo adipiscing arcu aliquet.</td>
+									<td>19.99</td>
+								</tr>
+								<tr>
+									<td>Item Three</td>
+									<td> Morbi faucibus arcu accumsan lorem.</td>
+									<td>29.99</td>
+								</tr>
+								<tr>
+									<td>Item Four</td>
+									<td>Vitae integer tempus condimentum.</td>
+									<td>19.99</td>
+								</tr>
+								<tr>
+									<td>Item Five</td>
+									<td>Ante turpis integer aliquet porttitor.</td>
+									<td>29.99</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="2"></td>
+									<td>100.00</td>
+								</tr>
+							</tfoot>
+						</table>
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Photography by Chase Carlson. Design by: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+					<h4>Alternate</h4>
+					<div class="table-wrapper">
+						<table class="alt">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Description</th>
+									<th>Price</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Item One</td>
+									<td>Ante turpis integer aliquet porttitor.</td>
+									<td>29.99</td>
+								</tr>
+								<tr>
+									<td>Item Two</td>
+									<td>Vis ac commodo adipiscing arcu aliquet.</td>
+									<td>19.99</td>
+								</tr>
+								<tr>
+									<td>Item Three</td>
+									<td> Morbi faucibus arcu accumsan lorem.</td>
+									<td>29.99</td>
+								</tr>
+								<tr>
+									<td>Item Four</td>
+									<td>Vitae integer tempus condimentum.</td>
+									<td>19.99</td>
+								</tr>
+								<tr>
+									<td>Item Five</td>
+									<td>Ante turpis integer aliquet porttitor.</td>
+									<td>29.99</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="2"></td>
+									<td>100.00</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</section>
 
-			</div>
+				<section>
+					<h3 class="major">Buttons</h3>
+					<ul class="actions">
+						<li><a href="#" class="button primary">Primary</a></li>
+						<li><a href="#" class="button">Default</a></li>
+					</ul>
+					<ul class="actions">
+						<li><a href="#" class="button">Default</a></li>
+						<li><a href="#" class="button small">Small</a></li>
+					</ul>
+					<ul class="actions">
+						<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+						<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+					</ul>
+					<ul class="actions">
+						<li><span class="button primary disabled">Disabled</span></li>
+						<li><span class="button disabled">Disabled</span></li>
+					</ul>
+				</section>
 
-		<!-- BG -->
-			<div id="bg"></div>
+				<section>
+					<h3 class="major">Form</h3>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field half">
+								<label for="demo-name">Name</label>
+								<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+							</div>
+							<div class="field half">
+								<label for="demo-email">Email</label>
+								<input type="email" name="demo-email" id="demo-email" value=""
+									placeholder="jane@untitled.tld" />
+							</div>
+							<div class="field">
+								<label for="demo-category">Category</label>
+								<select name="demo-category" id="demo-category">
+									<option value="">-</option>
+									<option value="1">Manufacturing</option>
+									<option value="1">Shipping</option>
+									<option value="1">Administration</option>
+									<option value="1">Human Resources</option>
+								</select>
+							</div>
+							<div class="field half">
+								<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+								<label for="demo-priority-low">Low</label>
+							</div>
+							<div class="field half">
+								<input type="radio" id="demo-priority-high" name="demo-priority">
+								<label for="demo-priority-high">High</label>
+							</div>
+							<div class="field half">
+								<input type="checkbox" id="demo-copy" name="demo-copy">
+								<label for="demo-copy">Email me a copy</label>
+							</div>
+							<div class="field half">
+								<input type="checkbox" id="demo-human" name="demo-human" checked>
+								<label for="demo-human">Not a robot</label>
+							</div>
+							<div class="field">
+								<label for="demo-message">Message</label>
+								<textarea name="demo-message" id="demo-message" placeholder="Enter your message"
+									rows="6"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" class="primary" /></li>
+							<li><input type="reset" value="Reset" /></li>
+						</ul>
+					</form>
+				</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>	
-			<script src="https://kit.fontawesome.com/8b4251c69b.js" crossorigin="anonymous"></script>
-	</body>
+			</article>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<p class="copyright">&copy; Photography by Chase Carlson. Design by: <a href="https://html5up.net">HTML5
+					UP</a>.</p>
+		</footer>
+
+	</div>
+
+	<!-- BG -->
+	<div id="bg"></div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="https://kit.fontawesome.com/8b4251c69b.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
