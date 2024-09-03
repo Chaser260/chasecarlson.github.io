@@ -61,6 +61,450 @@
 			</article>
 
 			<!-- Projects -->
+			<article id="projects" data-project="supply-chain-design-transshipment-optimization">
+				<h2><a title="Supply Chain Optimization - A Transshipment Problem" class="major">Supply Chain
+						Optimization With LINGO</a></h2>
+				<a title="Supply Chain Design A Transshipment Problem"><span class="image main"><img
+							src="images/Transshipment Problem Thumbnail.png"
+							alt="Machine Learning: Predicting Student Success" /></span></a>
+				<h4>Purpose</h4>
+				<p>
+					Global supply chains are complex systems, often responsible for shipping products from several
+					origin nodes to several transshipment nodes, and then on to several destination nodes. In a
+					transshipment problem, the objective is to determine how many units should be shipped over each arc
+					in the network so that all destination demands are satisfied with the minimum possible
+					transportation cost. Linear programming helps solve these network flow problems by providing a
+					mathematical means to determining the most efficient flow of goods throughout the distribution
+					network to minimize costs.
+				</p>
+
+				<div class="read-more-container">
+					<h4>The Problem</h4>
+
+					<p>
+						For this example I selected the following case problem from the textbook <i>Introduction to
+							Management Science: Quantitative Approach</i>:
+					</p>
+					<blockquote>
+						<p style="font-size: 14px">
+							The Darby Company manufactures and distributes meters used to measure electric power
+							consumption. The company started with a small production plant in El Paso and gradually
+							built a customer base throughout Texas. A distribution center was established in Fort Worth,
+							Texas, and later, as business expanded, a second distribution center was established in
+							Santa
+							Fe, New Mexico.
+						</p>
+						<p style="font-size: 14px">
+							The El Paso plant was expanded when the company began marketing its meters in Arizona,
+							California, Nevada, and Utah. With the growth of the West Coast business, the Darby Company
+							opened a third distribution center in Las Vegas and just two years ago opened a second
+							production plant in San Bernardino, California.
+						</p>
+						<p style="font-size: 14px">
+							Manufacturing costs differ between the company’s production plants. The cost of each meter
+							produced at the El Paso plant is $10.50. The San Bernardino plant utilizes newer and more
+							efficient equipment; as a result, manufacturing cost is $0.50 per meter less than at the El
+							Paso
+							plant.
+						</p>
+						<p style="font-size: 14px">
+							Due to the company’s rapid growth, not much attention had been paid to the efficiency of its
+							supply chain, but Darby’s management decided that it is time to address this issue. The cost
+							of shipping a meter from each of the two plants to each of the three distribution centers is
+							shown in <span style="color: dodgerblue;">Table 6.10</span>.
+						</p>
+						<p style="font-size: 14px">
+							The quarterly production capacity is 30,000 meters at the older El Paso plant and 20,000
+							meters at the San Bernardinoplant. Note that no shipments are allowed from the San
+							Bernardino plant to the Fort Worthdistribution center.
+						</p>
+						<p style="font-size: 14px">
+							The company serves nine customer zones from the three distribution centers. The forecast of
+							the number of meters needed in each customer zone for the next quarter is shownin <span
+								style="color: dodgerblue;">Table
+								6.11</span>.
+						</p>
+						<p style="font-size: 14px">
+							The cost per unit of shipping from each distribution center to each customer zone is given
+							in <span style="color: dodgerblue;">Table 6.12</span>; note that some distribution centers
+							cannot serve certain customer zones.
+							These are indicated by a dash, “—”.
+						</p>
+						<p style="font-size: 14px">
+							In its current supply chain, demand at the Dallas, San Antonio, Wichita, and Kansas City
+							customer zones is satisfied by shipments from the Fort Worthdistribution center. In a
+							similar
+							manner, the Denver, Salt Lake City, and Phoenix customer zonesare served by the Santa Fe
+							distribution center, and the Los Angeles and San Diego customer zones are served by the Las
+							Vegas distribution center. To determine how many units to ship from each plant, the
+							quarterly
+							customer demand forecasts are aggregated at the distribution centers, and a transportation
+							model
+							is used to minimize the cost of shipping from the production plants to the distribution
+							centers.
+					</blockquote>
+					<h5><span style="color: dodgerblue;">Table 6.10</span> SHIPPING COST PER UNIT FROM PRODUCTION PLANTS
+						TO DISTRIBUTION CENTERS (IN $)</h5>
+					<p>
+					<div class="table-wrapper">
+						<table>
+							<th style="font-size: 14px; text-align: center;"></th>
+							<th style="color: dodgerblue; font-size: 14px; text-align: center;" colspan="3">Distribution
+								Center
+							</th>
+							<tr>
+								<th style="color: dodgerblue; font-size: 14px; text-align: left;">
+									Plant</th>
+								<th style="font-size: 14px; text-align: center;">Fort Worth</th>
+								<th style="font-size: 14px; text-align: center;">Santa Fe</th>
+								<th style="font-size: 14px; text-align: center;">Las Vegas</th>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; text-align: left;">El Paso</td>
+								<td style="font-size: 14px;">3.20</td>
+								<td style="font-size: 14px;">2.20</td>
+								<td style="font-size: 14px;">4.20</td>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; text-align: left;">San Bernardino</td>
+								<td style="font-size: 14px;">—</td>
+								<td style="font-size: 14px;">3.90</td>
+								<td style="font-size: 14px;">1.20</td>
+							</tr>
+						</table>
+					</div>
+					</p>
+					<h5><span style="color: dodgerblue;">Table 6.11</span> QUARTERLY DEMAND FORECAST</h5>
+					<p>
+					<div class="table-wrapper">
+						<table>
+							<tr>
+								<th style="font-size: 14px; text-align: left;">Customer Zone</th>
+								<th style="font-size: 14px; text-align: center;">Demand (meters)</th>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; text-align: left;">Dallas</td>
+								<td style="font-size: 14px; text-align: center;">6300</td>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; text-align: left;">San Antonio</td>
+								<td style="font-size: 14px; text-align: center;">4880</td>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; text-align: left;">Wichita</td>
+								<td style="font-size: 14px; text-align: center;">2130</td>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; text-align: left;">Kansas City</td>
+								<td style="font-size: 14px; text-align: center;">1210</td>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; text-align: left;">Denver</td>
+								<td style="font-size: 14px; text-align: center;">6120</td>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; text-align: left;">Salt Lake City</td>
+								<td style="font-size: 14px; text-align: center;">4830</td>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; text-align: left;">Phoenix</td>
+								<td style="font-size: 14px; text-align: center;">2750</td>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; text-align: left;">Los Angeles</td>
+								<td style="font-size: 14px; text-align: center;">8580</td>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; text-align: left;">San Diego</td>
+								<td style="font-size: 14px; text-align: center;">4460</td>
+							</tr>
+						</table>
+					</div>
+					</p>
+					<h5><span style="color: dodgerblue;">Table 6.12</span> SHIPPING COST FROM THE DISTRIBUTION CENTERS
+						TO CUSTOMER ZONES</h5>
+					<p>
+					<div class="table-wrapper">
+						<table>
+							<th style="font-size: 14px; text-align: center;"></th>
+							<th style="color: dodgerblue; font-size: 14px; text-align: center;" colspan="9">Customer
+								Zone
+							</th>
+							<tr>
+								<th style="color: dodgerblue; font-size: 14px; text-align: center;">
+									Distribution Center</th>
+								<th style="font-size: 14px; text-align: center;">Dallas</th>
+								<th style="font-size: 14px; text-align: center;">San Antonio</th>
+								<th style="font-size: 14px; text-align: center;">Wichita</th>
+								<th style="font-size: 14px; text-align: center;">Kansas City</th>
+								<th style="font-size: 14px; text-align: center;">Denver</th>
+								<th style="font-size: 14px; text-align: center;">Salt Lake City</th>
+								<th style="font-size: 14px; text-align: center;">Phoenix</th>
+								<th style="font-size: 14px; text-align: center;">Los Angeles</th>
+								<th style="font-size: 14px; text-align: center;">San Diego</th>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; text-align: left;">Fort Worth</td>
+								<td style="font-size: 14px;">0.3</td>
+								<td style="font-size: 14px;">2.1</td>
+								<td style="font-size: 14px;">3.1</td>
+								<td style="font-size: 14px;">4.4</td>
+								<td style="font-size: 14px;">6.0</td>
+								<td style="font-size: 14px;">—</td>
+								<td style="font-size: 14px;">—</td>
+								<td style="font-size: 14px;">—</td>
+								<td style="font-size: 14px;">—</td>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; text-align: left;">Santa Fe</td>
+								<td style="font-size: 14px;">5.2</td>
+								<td style="font-size: 14px;">5.4</td>
+								<td style="font-size: 14px;">4.5</td>
+								<td style="font-size: 14px;">6.0</td>
+								<td style="font-size: 14px;">2.7</td>
+								<td style="font-size: 14px;">4.7</td>
+								<td style="font-size: 14px;">3.4</td>
+								<td style="font-size: 14px;">3.3</td>
+								<td style="font-size: 14px;">2.7</td>
+							</tr>
+							<tr>
+								<td style="font-size: 14px; text-align: left;">Las Vegas</td>
+								<td style="font-size: 14px;">—</td>
+								<td style="font-size: 14px;">—</td>
+								<td style="font-size: 14px;">—</td>
+								<td style="font-size: 14px;">—</td>
+								<td style="font-size: 14px;">5.4</td>
+								<td style="font-size: 14px;">3.3</td>
+								<td style="font-size: 14px;">2.4</td>
+								<td style="font-size: 14px;">2.1</td>
+								<td style="font-size: 14px;">2.5</td>
+							</tr>
+						</table>
+					</div>
+					</p>
+					<h4>Managerial Report</h4>
+					<p>
+						You are asked to make recommendations for improving Darby Company's supply chain by answering
+						the
+						following questions:
+					</p>
+					<ol>
+						<li>Draw a network representation of the Darby company's current supply chain map. If the
+							company does not change its current supply chain, what will its distribution costs be for
+							the following quarter?</li>
+						<li>Suppose that the company is willing to consider dropping the distribution center
+							limitations; that is, customers could be served by any of the distribution centers for which
+							costs are available. Can costs be reduced? If so, by how much? </li>
+						<li>The company wants to explore the possibility of satisfying some of the customer demand
+							directly from the production plants. In particular, the shipping cost is $0.30 per unit from
+							San Bernardino to Los Angeles and $0.70 from San Bernardino to San Diego. The cost for
+							direct shipments from El Paso to San Antonio is $3.50 per unit. Can distribution costs be
+							further reduced by considering these direct plant-tocustomer shipments? </li>
+					</ol>
+					<h4>Solution 1</h4>
+					<p>
+						The first step is to draw a supply chain map showing all of the potential shipment arcs out of
+						the production plants and distribution centers under the current structure. <span
+							style="color: dodgerblue;">Figure 1</span> shows
+						graphically the 14 distribution routes (arcs) Darby company can use. The ammount of supply
+						available is written next to each origin node, and the amount of demand is written next to each
+						destination node. The cost per unit of shipping from each node is written on the arc for each
+						route.
+					</p>
+					<div class="image">
+						<h5><span style="color: dodgerblue;">Figure 1.</span> Network map</h5>
+						<div class="image fit">
+							<img title="Click to open in a new tab" src="images/Transshipment network diagram.png"
+								alt="Transshipment network diagram" class="center">
+						</div>
+					</div>
+					<p>
+						A linear programming model is used to solve this transshipment problem to determine the minimum
+						cost under the given constraints. I used double-subscripted decision variables based on the
+						labels I gave in the network diagram above, with XA1 denoting the number of units
+						shipped from origin A (El Paso) to destination 1 (Fort Worth), XA2 denoting the number of units
+						shipped from origin A (El Paso) to destination 2 (Santa Fe), and so on.
+					</p>
+					<p>
+						Because the objective is to minimize the total transportation cost, I used the cost data in
+						<span style="color: dodgerblue;">Table 6.12</span> or on the arcs in <span
+							style="color: dodgerblue;">Figure 1</span> to develop the following objective function:
+					</p>
+					<p style="font-size: 14px;">
+						<i>Min</i> 13.7X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">A1</sub> +
+						12.7X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">A2</sub> +
+						14.7X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">A3</sub> +
+						13.9X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">B2</sub> +
+						11.2X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">B3</sub> +
+						0.3X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">14</sub> +
+						2.1X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">15</sub> +
+						3.1X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">16</sub> +
+						4.4X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">17</sub> +
+						2.7X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">28</sub> +
+						4.7X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">29</sub> +
+						3.4X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">210</sub> +
+						2.1X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">311</sub> +
+						2.5X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">312</sub>
+					</p>
+					<p>
+						This objective function ensures the lowest total cost through all possible distribution routes.
+					</p>
+					<p>
+						Transshipment problems also require several constraints for each of the shipment nodes. For
+						origin nodes, the sum of the shipments out minus the sum of the shipments in must be
+						less than or equal to the origin supply. For destination nodes, the sum of the shipments in
+						minus the sum of shipments out must equal demand. For transshipment nodes, the sum of the
+						shipments out must equal the sum of the shipments in.
+					</p>
+					<p>
+						Based on the requirements listed in the problem description, I came up with the following
+						constraints:
+					</p>
+					<p style="font-size: 14px;">
+						<i>El Paso supply constraint</i>: <br>
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">A1</sub> +
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">A2</sub> +
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">A3</sub> ≤ 30000 <br>
+						<i>San Bernardino supply constraint</i>: <br>
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">B2</sub> ≤ 20000<br>
+						<i>Fort Worth transshipment node</i>: <br>
+						(X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">14</sub> +
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">15</sub> +
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">16</sub> +
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">17</sub>) -
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">A1</sub> = 0<br>
+						<i>Santa Fe transshipment node</i>: <br>
+						(X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">28</sub> +
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">29</sub> +
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">210</sub>) -
+						(X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">A2</sub> +
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">B2</sub>) = 0<br>
+						<i>Las Vegas transshipment node</i>:<br>
+						(X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">311</sub> +
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">312)</sub> -
+						(X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">A3</sub> +
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">B3</sub>) = 0<br>
+						<i>Dallas demand constraint</i>: <br>
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">14</sub> ≥ 6300<br>
+						<i>San Antonio demand constraint</i>: <br>
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">15</sub> ≥ 4880<br>
+						<i>Wichita demand constraint</i>: <br>
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">16</sub> ≥ 2130<br>
+						<i>Kansas City demand constraint</i>: <br>
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">17</sub> ≥ 1210<br>
+						<i>Denver demand constraint</i>: <br>
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">28</sub> ≥ 6120<br>
+						<i>Salt Lake City demand constraint</i>: <br>
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">29</sub> ≥ 4830<br>
+						<i>Phoenix demand constraint</i>: <br>
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">210</sub> ≥ 2750<br>
+						<i>Los Angeles demand constraint</i>: <br>
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">311</sub> ≥ 8580<br>
+						<i>San Diego demand constraint</i>: <br>
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">312</sub> ≥ 4460<br>
+					</p>
+					<p>
+						The LINGO model and solution report are included in <span style="color: dodgerblue;">Figure
+							2</span> below:
+					</p>
+					<div class="image">
+						<h5><span style="color: dodgerblue;">Figure 2</span>. Optimal solution with current constraints
+						</h5>
+						<div class="image fit">
+							<img title="Click to open in a new tab" src="images/Transshipment Optimization Model 1.png"
+								alt="Transshipment optimization model" class="center">
+						</div>
+					</div>
+					<p>
+						The optimal solution projects that total transportation costs for the next quarter, given the
+						current constraints, will amount to $620,770. The El Paso plant is slated to ship 14,520 units
+						to the Fort Worth Distribution Center and 13,700 units to the Santa Fe Distribution Center. The
+						San Bernardino plant, however, is expected to ship only 13,840 of its 20,000-unit capacity to
+						Las Vegas, with no shipments to Santa Fe. At the Fort Worth Distribution Center, 6,300 units
+						will be distributed to Dallas, 4,880 units to San Antonio, 2,130 units to Wichita, and 1,210
+						units to Kansas City. Meanwhile, the Santa Fe Distribution Center will dispatch 6,120 units to
+						Denver, 4,830 units to Salt Lake City, and 2,750 units to Phoenix. Lastly, the Las Vegas
+						Distribution Center will distribute 8,580 units to Los Angeles and 4,460 units to San Diego.
+					</p>
+					<h4>Solution 2</h4>
+					<p>
+						To determine if costs can be reduced if the company is willing to consider dropping the
+						distribution center limitations, I present an updated graphic representation of the distribution
+						network along with a modified linear program below in <span style="color: dodgerblue;">Figure
+							3</span> and <span style="color: dodgerblue;">Figure 4</span>.
+					</p>
+					<div class="image">
+						<h5><span style="color: dodgerblue;">Figure 3</span>. Modified distribution network diagram
+						</h5>
+						<div class="image fit">
+							<img title="Click to open in a new tab" src="images/Transshipment Network diagram 2.png"
+								alt="Transshipment network diagram" class="center">
+						</div>
+					</div>
+					<p>
+						You can see the arrows in green indicate new potential distribution routes. Fort Worth can
+						now ship to customers in Denver. Santa Fe can now ship to customers in Dallas, San Antonio,
+						Wichita, Kansas City, LA, and San Diego. And Las Vegas can now ship to customers in Denver, Salt
+						Lake City, and Phoenix. Supply and Demand remain the same, as do the restrictions on the
+						origin nodes.
+					</p>
+					<div class="image">
+						<h5><span style="color: dodgerblue;">Figure 4</span>. Optimal solution without distribution
+							center limitations
+						</h5>
+						<div class="image fit">
+							<img title="Click to open in a new tab" src="images/Transshipment Optimization model 2.png"
+								alt="Transshipment optimization model" class="center">
+						</div>
+					</div>
+					<p>
+						If Darby Company were to lift the distribution center restrictions, it could save a total of
+						$19,828 in shipping costs. By adjusting the constraints, some of the demand could be shifted
+						from the El Paso production plant to the San Bernardino plant, allowing it to ship its full
+						capacity (20,000 units) to Las Vegas. Since the transportation costs per unit are lower from Las
+						Vegas to Salt Lake City ($3.30) and from Las Vegas to Phoenix ($2.40) compared to shipping from
+						Santa Fe to Salt Lake City ($4.70) and from Santa Fe to Phoenix ($3.40), the company would
+						benefit from dropping these restrictions and utilizing the more cost-effective distribution
+						routes.
+					</p>
+					<h4>Solution 3</h4>
+					<p>
+						Allowing direct shipments from El Paso to San Antonio, and from San Bernardino to LA and San
+						Diego add three new arcs to the network model. We add
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">A5</sub>,
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">B11</sub>, &
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">B12</sub>
+						to the objective function. Additionally, we adjust the demand constraints for San Antonio, LA,
+						and San Diego to account for the direct shipments from the production plants. The results are
+						shown below in <span style="color: dodgerblue;">Figure 5</span>.
+					</p>
+					<div class="image">
+						<h5><span style="color: dodgerblue;">Figure 5</span>. Optimal solution with direct-to-customer
+							shipments
+						</h5>
+						<div class="image fit">
+							<img title="Click to open in a new tab" src="images/Transshipment Optimization Model 3.png"
+								alt="Transshipment optimization model" class="center">
+						</div>
+					</div>
+					<p>
+						The value of
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">A5</sub> = 4,880 indicates
+						that 4,880 units are being shipped directly from El Paso to San Antonio. Similarly,
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">B11</sub> = 8,580 indicates
+						that 8,580 units are shipped directly from San Bernardino to LA, while
+						X<sub style="position: relative; top: 0.25em; font-size: 0.75em;">B12</sub> = 4,460 shows
+						that 4,460 units are shipped directly from San Bernardino to San Diego. This solution report
+						highlights a $248,876 reduction in the total cost by implementing these direct-to-customer
+						shipping routes, translating to a 40% savings compared to the previous supply chain model. Based
+						on this analysis, it is recommended that Darby Company adopts direct-to-customer shipping from
+						its production plants and removes the existing limitations on shipping from distribution
+						centers.
+					</p>
+				</div>
+				<button class="read-more-button">Read more...</button>
+				<button class="read-less-button">Read less...</button>
+			</article>
 			<article id="projects" data-project="predicting-student-success">
 				<h2><a title="View on Kaggle" href="https://www.kaggle.com/code/chaser260/predicting-student-success"
 						class="major">Machine Learning: Predicting Student Success With Python</a></h2>
