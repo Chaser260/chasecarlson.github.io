@@ -1075,6 +1075,7 @@ ul.icons li a:active {
 	text-align: center;
 	-webkit-overflow-scrolling: touch;
 	overflow-x: auto;
+	padding: 0 1em;
 }
 
 table {
@@ -1095,6 +1096,7 @@ table th {
 	padding: 0.75em 0.75em;
 	vertical-align: middle;
 	border: solid white 0.1em;
+	box-sizing: border-box;
 }
 
 table th {
